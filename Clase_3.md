@@ -1,5 +1,5 @@
-1) Cree dos archivos de texto similares (con una o dos líneas diferentes). Compárelos empleando diff.
- R// Compare-Object -ReferenceObject (Get-Content .\holita.txt) -DifferenceObject (Get-Content .\holita1.txt)
+###1) Cree dos archivos de texto similares (con una o dos líneas diferentes). Compárelos empleando diff.
+´´´R// Compare-Object -ReferenceObject (Get-Content .\holita.txt) -DifferenceObject (Get-Content .\holita1.txt)´´´
  
 2)Qué ocurre si se ejecuta:
 	get-service | export-csv servicios.csv | out-file
