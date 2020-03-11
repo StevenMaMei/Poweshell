@@ -49,19 +49,18 @@
   
 # SEMANA 8
 ### 1) ¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
+R// Sí, la clase win32_NetworkAdapter configuration. Sin embargo no posee un método para liberar un préstamo de dirección DHCP
+	
+```Get-CimInstance win32_networkadapterconfiguration | Select-Object IP -> Así se consultaría la IP de los adaptadores
+	
+Alternativamente -> Get-WmiObject  win32_networkadapterconfiguration | Select-Object IP```
 
-```R// Sí, la clase win32_NetworkAdapter configuration. Sin embargo no posee un método para liberar un préstamo de dirección DHCP
-	
-**Get-CimInstance win32_networkadapterconfiguration | Select-Object IP** -> Así se consultaría la IP de los adaptadores
-	
-Alternativamente -> **Get-WmiObject  win32_networkadapterconfiguration | Select-Object IP** ```
 ### 2) Despliegue una lista de parches empleando WMI (Microsoft se refiere a los parches con el nombre quick-fix engineering). Es diferente el listado al que produce el cmdlet Get-Hotfix?
 	
 ```R//
-	si se usa  **Get-WmiObject win32_quickfixengineering** todo sería igual a get-hotfix
+	si se usa  Get-WmiObject win32_quickfixengineering todo sería igual a get-hotfix
 	
-	Sin embargo, si se usa **Get-CimInstance win32_quickfixengineering**. En primer instancia, el listado producido por ambos comandos no difiere. Sin embargo, cuando se hace GM, sí hay pequeñas diferencias en cuanto a los métodos y propiedades```
-	
+	Sin embargo, si se usa Get-CimInstance win32_quickfixengineering. En primer instancia, el listado producido por ambos comandos no difiere. Sin embargo, cuando se hace GM, sí hay pequeñas diferencias en cuanto a los métodos y propiedades```
 ### 3)  Empleando WMI, muestre una lista de servicios, que incluya su status actual, su modalidad de inicio, y las cuentas que emplean para hacer login.
 	
 	```R//Get-WmiObject win32_service | Select-Object status, startmode, systemname```
