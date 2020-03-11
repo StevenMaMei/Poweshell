@@ -1,0 +1,4730 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200311125704
+Nombre de usuario: MSI\StevenMa
+Usuario RunAs: MSI\StevenMa
+Nombre de la configuración: 
+Máquina: MSI (Microsoft Windows NT 10.0.18363.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 19160
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\USUARIO\Documents\PowerShell_transcript.MSI.FYOv_okB.20200311125704.txt
+PS C:\Users\USUARIO>  ls | where -filter ({$_.Name -like "*exe"} -and {$_.length/1MB -gt 5})
+>> ErrorTerminación(Where-Object): "No se puede enlazar el parámetro 'FilterScript'. No se puede convertir el valor "True" al tipo "System.Management.Automation.ScriptBlock". Error: "Conversión no válida desde 'System.Boolean' hasta 'System.Management.Automation.ScriptBlock'.""
+Where-Object : No se puede enlazar el parámetro 'FilterScript'. No se puede convertir el valor "True" al tipo 
+"System.Management.Automation.ScriptBlock". Error: "Conversión no válida desde 'System.Boolean' hasta 
+'System.Management.Automation.ScriptBlock'."
+En línea: 1 Carácter: 21
++ ... s | where -filter ({$_.Name -like "*exe"} -and {$_.length/1MB -gt 5})
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Where-Object], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.WhereObjectCommand
+Where-Object : No se puede enlazar el parámetro 'FilterScript'. No se puede convertir el valor "True" al tipo
+"System.Management.Automation.ScriptBlock". Error: "Conversión no válida desde 'System.Boolean' hasta
+'System.Management.Automation.ScriptBlock'."
+En línea: 1 Carácter: 21
++ ... s | where -filter ({$_.Name -like "*exe"} -and {$_.length/1MB -gt 5})
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Where-Object], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.PowerShell.Commands.WhereObjectCommand
+
+PS C:\Users\USUARIO>  ls | where -filter {$_.Name -like "*exe"} | WHERE -filter {$_.length/1MB -gt 5}
+PS C:\Users\USUARIO>  ls | where -filter {$_.Name -like "*exe"} | WHERE -filter {$_.length/1MB -gt 5}
+PS C:\Users\USUARIO>  ls -Path C:\Windows\System32 | where -filter {$_.Name -like "*exe"} | WHERE -filter {$_.length/1MB -gt 5}
+
+
+    Directorio: C:\Windows\System32
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----     14/02/2020  9:46 a. m.      120407888 MRT.exe
+-a----     14/02/2020  9:41 a. m.        9929016 ntoskrnl.exe
+
+
+PS C:\Users\USUARIO>  ls -Path C:\Windows\System32 | where -filter {$_.Name -like "*exe"}
+
+
+    Directorio: C:\Windows\System32
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----    18/03/2019  11:43 p. m.          13312 agentactivationruntimestarter.exe
+-a----    15/11/2019  10:52 a. m.        2871848 aitstatic.exe
+-a----    18/03/2019  11:44 p. m.          94720 alg.exe
+-a----    18/03/2019  11:44 p. m.         119296 AppHostRegistrationVerifier.exe
+-a----    18/03/2019  11:44 p. m.          19456 appidcertstorecheck.exe
+-a----    18/03/2019  11:44 p. m.         158720 appidpolicyconverter.exe
+-a----    15/11/2019  10:52 a. m.          25600 appidtel.exe
+-a----    18/03/2019  11:44 p. m.          72984 ApplicationFrameHost.exe
+-a----     14/02/2020  9:41 a. m.        1149928 ApplyTrustOffline.exe
+-a----      6/10/2019  3:03 p. m.         238592 ApproveChildRequest.exe
+-a----    18/03/2019  11:45 p. m.          26112 ARP.EXE
+-a----    18/03/2019  11:44 p. m.          30208 at.exe
+-a----    15/11/2019  10:52 a. m.          86016 AtBroker.exe
+-a----    18/03/2019  11:45 p. m.          21504 attrib.exe
+-a----     14/02/2020  9:41 a. m.         589592 audiodg.exe
+-a----    18/03/2019  11:45 p. m.          40960 auditpol.exe
+-a----    18/03/2019  11:44 p. m.         138416 AuthHost.exe
+-a----    18/03/2019  11:44 p. m.         961024 autochk.exe
+-a----    18/03/2019  11:45 p. m.         939008 autoconv.exe
+-a----    18/03/2019  11:45 p. m.         913408 autofmt.exe
+-a----    15/11/2019  10:52 a. m.          60416 AxInstUI.exe
+-a----    18/03/2019  11:44 p. m.          19984 backgroundTaskHost.exe
+-a----    18/03/2019  11:44 p. m.          37376 BackgroundTransferHost.exe
+-a----      6/10/2019  3:03 p. m.         120832 bash.exe
+-a----    18/03/2019  11:43 p. m.         231424 bcdboot.exe
+-a----      6/10/2019  3:03 p. m.         481592 bcdedit.exe
+-a----     13/10/2019  6:05 p. m.          53760 BdeUISrv.exe
+-a----      6/10/2019  3:04 p. m.         283264 bdeunlock.exe
+-a----     13/10/2019  6:04 p. m.         829536 BioIso.exe
+-a----     19/03/2019  7:02 a. m.         138240 BitLockerDeviceEncryption.exe
+-a----     19/03/2019  7:02 a. m.         102400 BitLockerWizardElev.exe
+-a----    18/03/2019  11:44 p. m.         212480 bitsadmin.exe
+-a----    18/03/2019  11:43 p. m.          93184 bootcfg.exe
+-a----    18/03/2019  11:46 p. m.          26112 bootim.exe
+-a----    18/03/2019  11:43 p. m.         107832 bootsect.exe
+-a----    18/03/2019  11:45 p. m.          20480 bridgeunattend.exe
+-a----      6/10/2019  3:03 p. m.         147456 browserexport.exe
+-a----      6/10/2019  3:03 p. m.          46632 browser_broker.exe
+-a----    18/03/2019  11:44 p. m.          40448 bthudtask.exe
+-a----      6/10/2019  3:03 p. m.          64000 ByteCodeGenerator.exe
+-a----    18/03/2019  11:45 p. m.          33280 cacls.exe
+-a----    18/03/2019  11:45 p. m.          27648 calc.exe
+-a----     19/03/2019  7:02 a. m.          32728 CameraSettingsUIHost.exe
+-a----    18/03/2019  11:45 p. m.          61480 CastSrv.exe
+-a----     13/10/2019  6:03 p. m.          64512 CertEnrollCtrl.exe
+-a----    18/03/2019  11:45 p. m.         536064 certreq.exe
+-a----    18/03/2019  11:45 p. m.        1670144 certutil.exe
+-a----      6/10/2019  3:03 p. m.         102216 changepk.exe
+-a----    18/03/2019  11:45 p. m.         191488 charmap.exe
+-a----    18/03/2019  11:45 p. m.          29184 CheckNetIsolation.exe
+-a----    18/03/2019  11:44 p. m.          25088 chkdsk.exe
+-a----    18/03/2019  11:44 p. m.          21504 chkntfs.exe
+-a----    18/03/2019  11:45 p. m.          33792 choice.exe
+-a----    18/03/2019  11:45 p. m.          30720 CIDiag.exe
+-a----    18/03/2019  11:44 p. m.          46592 cipher.exe
+-a----    18/03/2019  11:45 p. m.          71168 cleanmgr.exe
+-a----    18/03/2019  11:45 p. m.          30720 cliconfg.exe
+-a----    18/03/2019  11:45 p. m.          30720 clip.exe
+-a----     19/03/2019  7:02 a. m.         146744 ClipRenew.exe
+-a----     14/02/2020  9:42 a. m.        1218120 ClipUp.exe
+-a----    18/03/2019  11:44 p. m.          66360 CloudExperienceHostBroker.exe
+-a----    18/03/2019  11:43 p. m.          60624 CloudNotifications.exe
+-a----    15/11/2019  10:52 a. m.         280064 cmd.exe
+-a----    18/03/2019  11:45 p. m.          19968 cmdkey.exe
+-a----    18/03/2019  11:45 p. m.          51712 cmdl32.exe
+-a----    18/03/2019  11:45 p. m.          43008 cmmon32.exe
+-a----    18/03/2019  11:45 p. m.          93696 cmstp.exe
+-a----    18/03/2019  11:45 p. m.          24064 cofire.exe
+-a----    18/03/2019  11:44 p. m.          87552 colorcpl.exe
+-a----    18/03/2019  11:45 p. m.          25088 comp.exe
+-a----      6/10/2019  3:03 p. m.          46080 compact.exe
+-a----    15/11/2019  10:52 a. m.         164368 CompatTelRunner.exe
+-a----      6/10/2019  3:03 p. m.          91136 CompMgmtLauncher.exe
+-a----    18/03/2019  11:43 p. m.         187392 CompPkgSrv.exe
+-a----      6/10/2019  3:03 p. m.          78848 ComputerDefaults.exe
+-a----    18/03/2019  11:44 p. m.         885760 conhost.exe
+-a----    18/03/2019  11:44 p. m.         159248 consent.exe
+-a----    18/03/2019  11:43 p. m.         117760 control.exe
+-a----    18/03/2019  11:45 p. m.          21504 convert.exe
+-a----    18/03/2019  11:44 p. m.         225592 convertvhd.exe
+-a----    18/03/2019  11:44 p. m.          73216 coredpussvr.exe
+-a----    18/03/2019  11:43 p. m.         380120 CredentialEnrollmentManager.exe
+-a----    18/03/2019  11:44 p. m.         145312 CredentialUIBroker.exe
+-a----    18/03/2019  11:45 p. m.          37888 credwiz.exe
+-a----    18/03/2019  11:45 p. m.         157184 cscript.exe
+-a----    18/03/2019  11:44 p. m.          17808 csrss.exe
+-a----    18/03/2019  11:44 p. m.          11264 ctfmon.exe
+-a----    18/03/2019  11:45 p. m.          87552 cttune.exe
+-a----    18/03/2019  11:45 p. m.          41984 cttunesvr.exe
+-a----      6/10/2019  3:03 p. m.         421376 curl.exe
+-a----     14/02/2020  9:41 a. m.          77824 CustomInstallExec.exe
+-a----    18/03/2019  11:44 p. m.          95744 dasHost.exe
+-a----    18/03/2019  11:45 p. m.         246288 DataExchangeHost.exe
+-a----      6/10/2019  3:03 p. m.         149504 DataStoreCacheDumpTool.exe
+-a----    18/03/2019  11:45 p. m.         134656 DataUsageLiveTileTask.exe
+-a----    18/03/2019  11:44 p. m.          99840 dccw.exe
+-a----    18/03/2019  11:44 p. m.          11776 dcomcnfg.exe
+-a----    18/03/2019  11:44 p. m.          38400 ddodiag.exe
+-a----     14/02/2020  9:42 a. m.         186880 Defrag.exe
+-a----    18/03/2019  11:44 p. m.          35840 deploymentcsphelper.exe
+-a----    18/03/2019  11:44 p. m.          77824 desktopimgdownldr.exe
+-a----    15/11/2019  10:52 a. m.          36368 DeviceCensus.exe
+-a----    18/03/2019  11:44 p. m.          80896 DeviceCredentialDeployment.exe
+-a----    18/03/2019  11:45 p. m.          30208 DeviceEject.exe
+-a----     13/10/2019  6:04 p. m.         551424 DeviceEnroller.exe
+-a----    18/03/2019  11:45 p. m.          94208 DevicePairingWizard.exe
+-a----    18/03/2019  11:45 p. m.          94720 DeviceProperties.exe
+-a----    18/03/2019  11:45 p. m.          52736 DFDWiz.exe
+-a----     14/02/2020  9:42 a. m.         105472 dfrgui.exe
+-a----    18/03/2019  11:45 p. m.          37376 dialer.exe
+-a----     13/10/2019  6:03 p. m.         285696 directxdatabaseupdater.exe
+-a----    18/03/2019  11:43 p. m.         156160 diskpart.exe
+-a----    18/03/2019  11:45 p. m.          25088 diskperf.exe
+-a----    18/03/2019  11:43 p. m.         337920 diskraid.exe
+-a----    18/03/2019  11:44 p. m.          92160 DiskSnapshot.exe
+-a----    18/03/2019  11:44 p. m.         278840 Dism.exe
+-a----    18/03/2019  11:44 p. m.         126464 dispdiag.exe
+-a----    18/03/2019  11:45 p. m.        1918480 DisplaySwitch.exe
+-a----    18/03/2019  11:45 p. m.          73728 djoin.exe
+-a----    18/03/2019  11:44 p. m.          21304 dllhost.exe
+-a----    18/03/2019  11:44 p. m.          12800 dllhst3g.exe
+-a----    18/03/2019  11:44 p. m.         154112 dmcertinst.exe
+-a----    18/03/2019  11:44 p. m.          38400 dmcfghost.exe
+-a----    18/03/2019  11:43 p. m.         120320 dmclient.exe
+-a----    18/03/2019  11:43 p. m.          32256 DmNotificationBroker.exe
+-a----    18/03/2019  11:44 p. m.          34304 DmOmaCpMo.exe
+-a----    18/03/2019  11:44 p. m.          32768 dnscacheugc.exe
+-a----    18/03/2019  11:45 p. m.          18944 doskey.exe
+-a----    18/03/2019  11:45 p. m.          76800 dpapimig.exe
+-a----    18/03/2019  11:45 p. m.          79360 DpiScaling.exe
+-a----    18/03/2019  11:45 p. m.          10240 dpnsvr.exe
+-a----    18/03/2019  11:45 p. m.          82944 driverquery.exe
+-a----    18/03/2019  11:44 p. m.          80896 drvcfg.exe
+-a----     13/10/2019  6:04 p. m.         173568 drvinst.exe
+-a----    18/03/2019  11:44 p. m.          17920 DsmUserTask.exe
+-a----    18/03/2019  11:45 p. m.         970240 dsregcmd.exe
+-a----     14/02/2020  9:41 a. m.          13312 dstokenclean.exe
+-a----    18/03/2019  11:43 p. m.         132104 DTUHandler.exe
+-a----    18/03/2019  11:45 p. m.          37888 dusmtask.exe
+-a----    18/03/2019  11:45 p. m.          11776 dvdplay.exe
+-a----     13/10/2019  6:04 p. m.          71680 dwm.exe
+-a----     14/02/2020  9:42 a. m.         224768 DWWIN.EXE
+-a----     13/10/2019  6:04 p. m.         369664 dxdiag.exe
+-a----     13/10/2019  6:03 p. m.         221696 dxgiadaptercache.exe
+-a----    18/03/2019  11:45 p. m.         307712 Dxpserver.exe
+-a----    18/03/2019  11:43 p. m.          13824 Eap3Host.exe
+-a----    15/11/2019  10:52 a. m.         118272 EaseOfAccessDialog.exe
+-a----    18/03/2019  11:45 p. m.          76944 easinvoker.exe
+-a----    18/03/2019  10:17 a. m.          64000 EASPolicyManagerBrokerHost.exe
+-a----    18/03/2019  11:45 p. m.         163328 EDPCleanup.exe
+-a----      6/10/2019  3:03 p. m.          61952 edpnotify.exe
+-a----    18/03/2019  11:45 p. m.          97280 EduPrintProv.exe
+-a----    18/03/2019  11:44 p. m.          14336 efsui.exe
+-a----    18/03/2019  11:45 p. m.         129024 EhStorAuthn.exe
+-a----    18/03/2019  11:45 p. m.         387584 esentutl.exe
+-a----    18/03/2019  11:45 p. m.         356352 eudcedit.exe
+-a----    18/03/2019  11:45 p. m.          42496 eventcreate.exe
+-a----    18/03/2019  11:45 p. m.          83968 eventvwr.exe
+-a----    18/03/2019  11:44 p. m.          66048 expand.exe
+-a----    18/03/2019  11:44 p. m.          34304 extrac32.exe
+-a----    18/03/2019  11:45 p. m.          24576 fc.exe
+-a----    18/03/2019  11:45 p. m.         139776 fhmanagew.exe
+-a----    18/03/2019  11:45 p. m.         249856 FileHistory.exe
+-a----    18/03/2019  11:45 p. m.          17408 find.exe
+-a----    18/03/2019  11:45 p. m.          35328 findstr.exe
+-a----    18/03/2019  11:45 p. m.          15872 finger.exe
+-a----      6/10/2019  3:03 p. m.          21504 fixmapi.exe
+-a----    18/03/2019  11:44 p. m.          30720 fltMC.exe
+-a----    18/03/2019  11:45 p. m.          47104 fodhelper.exe
+-a----    18/03/2019  11:45 p. m.         112128 Fondue.exe
+-a----    13/12/2019  12:34 a. m.         822416 fontdrvhost.exe
+-a----    18/03/2019  11:43 p. m.         121344 fontview.exe
+-a----    18/03/2019  11:45 p. m.          49152 forfiles.exe
+-a----    18/03/2019  11:45 p. m.          16896 fsavailux.exe
+-a----     14/02/2020  9:42 a. m.          99712 FsIso.exe
+-a----    18/03/2019  11:44 p. m.         146944 fsquirt.exe
+-a----    18/03/2019  11:45 p. m.         199480 fsutil.exe
+-a----    18/03/2019  11:45 p. m.          58880 ftp.exe
+-a----     19/03/2019  7:02 a. m.         171520 fvenotify.exe
+-a----    18/03/2019  11:46 p. m.         234496 FXSCOVER.exe
+-a----    18/03/2019  11:46 p. m.         636416 FXSSVC.exe
+-a----    18/03/2019  11:46 p. m.          19456 FXSUNATD.exe
+-a----    18/03/2019  11:45 p. m.         307200 GameBarPresenceWriter.exe
+-a----    18/03/2019  11:45 p. m.        1293312 GamePanel.exe
+-a----    18/03/2019  11:44 p. m.         662328 GenValObj.exe
+-a----    18/03/2019  11:44 p. m.          85504 getmac.exe
+-a----    18/03/2019  11:45 p. m.         221184 gpresult.exe
+-a----    18/03/2019  11:45 p. m.          29696 gpupdate.exe
+-a----    18/03/2019  11:45 p. m.          52736 grpconv.exe
+-a----    18/03/2019  11:45 p. m.          67584 hdwwiz.exe
+-a----    18/03/2019  11:45 p. m.          11776 help.exe
+-a----    18/03/2019  11:45 p. m.          14336 HOSTNAME.EXE
+-a----     14/02/2020  9:41 a. m.        1077264 hvax64.exe
+-a----     14/02/2020  9:41 a. m.        1398584 hvix64.exe
+-a----    27/05/2018  10:20 p. m.         219664 iaStorAfsNative.exe
+-a----    27/05/2018  10:20 p. m.        2807824 iaStorAfsService.exe
+-a----     15/05/2018  2:28 p. m.         541896 ibtsiva.exe
+-a----    18/03/2019  11:45 p. m.          37888 icacls.exe
+-a----     13/10/2019  6:03 p. m.          36864 IcsEntitlementHost.exe
+-a----     14/02/2020  9:41 a. m.          17920 icsunattend.exe
+-a----     14/02/2020  9:42 a. m.         228864 ie4uinit.exe
+-a----    18/03/2019  11:45 p. m.          74240 ie4ushowIE.exe
+-a----    18/03/2019  11:45 p. m.         153088 ieUnatt.exe
+-a----    18/03/2019  11:45 p. m.         166400 iexpress.exe
+-a----    18/03/2019  11:44 p. m.         136704 immersivetpmvscmgrsvr.exe
+-a----    18/03/2019  11:45 p. m.          13824 InfDefaultInstall.exe
+-a----    18/03/2019  11:44 p. m.          86016 InputSwitchToastHandler.exe
+-a----    18/03/2019  11:45 p. m.          34816 ipconfig.exe
+-a----    18/03/2019  11:45 p. m.          50176 iscsicli.exe
+-a----    18/03/2019  11:45 p. m.          12288 iscsicpl.exe
+-a----    18/03/2019  11:45 p. m.         119808 isoburn.exe
+-a----     1/12/2019  12:15 a. m.         171808 java.exe
+-a----     1/12/2019  12:15 a. m.         171808 javaw.exe
+-a----     1/12/2019  12:15 a. m.         189728 javaws.exe
+-a----    18/03/2019  11:45 p. m.          37376 klist.exe
+-a----    18/03/2019  11:45 p. m.          37888 ksetup.exe
+-a----    18/03/2019  11:45 p. m.          17920 ktmutil.exe
+-a----    18/03/2019  11:45 p. m.          16896 label.exe
+-a----    18/03/2019  11:44 p. m.          51712 LanguageComponentsInstallerComHandler.exe
+-a----    18/03/2019  11:44 p. m.          11776 LaunchTM.exe
+-a----    15/11/2019  10:52 a. m.          43520 LaunchWinApp.exe
+-a----    18/03/2019  11:44 p. m.         197120 LegacyNetUXHost.exe
+-a----    18/03/2019  11:44 p. m.          47616 LicenseManagerShellext.exe
+-a----    18/03/2019  11:44 p. m.         294912 licensingdiag.exe
+-a----      6/10/2019  3:03 p. m.         142544 LicensingUI.exe
+-a----    18/03/2019  11:45 p. m.          67584 LocationNotificationWindows.exe
+-a----    18/03/2019  11:44 p. m.          11264 Locator.exe
+-a----    18/03/2019  11:44 p. m.          89344 LockAppHost.exe
+-a----    18/03/2019  11:43 p. m.          48024 LockScreenContentServer.exe
+-a----    18/03/2019  11:44 p. m.          50176 lodctr.exe
+-a----     19/03/2019  7:02 a. m.         110080 logagent.exe
+-a----    18/03/2019  11:45 p. m.         114688 logman.exe
+-a----    18/03/2019  11:44 p. m.          13824 LogonUI.exe
+-a----    18/03/2019  11:44 p. m.          41984 lpkinstall.exe
+-a----    18/03/2019  11:44 p. m.         733696 lpksetup.exe
+-a----    18/03/2019  11:44 p. m.          71680 lpremove.exe
+-a----     13/10/2019  6:04 p. m.         278080 LsaIso.exe
+-a----    18/03/2019  11:44 p. m.          58088 lsass.exe
+-a----    15/11/2019  10:52 a. m.         446464 Magnify.exe
+-a----    18/03/2019  11:44 p. m.          83456 makecab.exe
+-a----     19/03/2019  7:02 a. m.         224768 manage-bde.exe
+-a----    18/03/2019  11:45 p. m.         116224 MbaeParserTask.exe
+-a----    18/03/2019  11:45 p. m.         797184 mblctr.exe
+-a----     14/02/2020  9:41 a. m.         857088 MBR2GPT.EXE
+-a----     13/10/2019  6:04 p. m.          94208 mcbuilder.exe
+-a----    27/12/2019  10:11 p. m.         858032 MCU.exe
+-a----     19/03/2019  7:02 a. m.         458240 MDEServer.exe
+-a----    18/03/2019  11:43 p. m.         113664 MDMAgent.exe
+-a----     16/01/2020  7:37 p. m.         148992 MDMAppInstaller.exe
+-a----    18/03/2019  11:44 p. m.          51712 MdmDiagnosticsTool.exe
+-a----    18/03/2019  11:45 p. m.          87040 MdRes.exe
+-a----    18/03/2019  11:45 p. m.          92672 MdSched.exe
+-a----     19/03/2019  7:02 a. m.          50616 mfpmp.exe
+-a----    18/03/2019  11:43 p. m.          94720 MicrosoftEdgeBCHost.exe
+-a----    18/03/2019  11:44 p. m.          94720 MicrosoftEdgeCP.exe
+-a----    18/03/2019  11:43 p. m.          94720 MicrosoftEdgeDevTools.exe
+-a----    18/03/2019  11:44 p. m.          56320 MicrosoftEdgeSH.exe
+-a----    18/03/2019  11:43 p. m.          58880 mitigationscanner.exe
+-a----    18/03/2019  11:45 p. m.        1802240 mmc.exe
+-a----      6/10/2019  3:03 p. m.        1553408 mmgaserver.exe
+-a----    18/03/2019  11:45 p. m.          98816 mobsync.exe
+-a----    18/03/2019  11:45 p. m.          18432 mountvol.exe
+-a----     13/10/2019  6:03 p. m.         717312 mousocoreworker.exe
+-a----    18/03/2019  11:44 p. m.          19456 mpnotify.exe
+------     21/12/2019  8:50 p. m.         748816 MpSigStub.exe
+-a----    18/03/2019  11:45 p. m.          16896 MRINFO.EXE
+-a----     14/02/2020  9:46 a. m.      120407888 MRT.exe
+-a----    18/03/2019  11:44 p. m.          83456 MSchedExe.exe
+-a----    18/03/2019  11:45 p. m.         187904 msconfig.exe
+-a----    18/03/2019  11:45 p. m.         409600 msdt.exe
+-a----    18/03/2019  11:45 p. m.         148480 msdtc.exe
+-a----     14/02/2020  9:42 a. m.          15360 msfeedssync.exe
+-a----    18/03/2019  11:45 p. m.          14848 mshta.exe
+-a----    18/03/2019  11:45 p. m.          67072 msiexec.exe
+-a----    18/03/2019  11:45 p. m.         369152 msinfo32.exe
+-a----      6/10/2019  3:03 p. m.         947712 mspaint.exe
+-a----    18/03/2019  11:46 p. m.         588800 msra.exe
+-a----    18/03/2019  11:46 p. m.          81920 MsSpellCheckingHost.exe
+-a----    18/03/2019  11:45 p. m.        1538560 mstsc.exe
+-a----    18/03/2019  11:44 p. m.         135168 mtstocom.exe
+-a----    18/03/2019  11:44 p. m.         103424 MuiUnattend.exe
+-a----    18/03/2019  11:45 p. m.          53760 MultiDigiMon.exe
+-a----     14/02/2020  9:41 a. m.         605184 MusNotification.exe
+-a----     14/02/2020  9:41 a. m.         516096 MusNotificationUx.exe
+-a----     14/02/2020  9:41 a. m.         459896 MusNotifyIcon.exe
+-a----     28/11/2019  1:05 a. m.        1758968 NahimicService.exe
+-a----     28/11/2019  1:05 a. m.        1074936 NahimicSvc64.exe
+-a----    15/11/2019  10:52 a. m.         492032 Narrator.exe
+-a----    18/03/2019  11:45 p. m.          21504 nbtstat.exe
+-a----    18/03/2019  11:45 p. m.          69120 ndadmin.exe
+-a----    18/03/2019  11:45 p. m.          23552 NDKPing.exe
+-a----    18/03/2019  11:45 p. m.          57856 net.exe
+-a----    18/03/2019  11:45 p. m.         176128 net1.exe
+-a----    18/03/2019  11:45 p. m.          26112 netbtugc.exe
+-a----    18/03/2019  11:44 p. m.          36352 netcfg.exe
+-a----    18/03/2019  11:45 p. m.          78336 NetCfgNotifyObjectHost.exe
+-a----    18/03/2019  11:45 p. m.          34816 NetEvtFwdr.exe
+-a----    18/03/2019  11:45 p. m.          10752 NetHost.exe
+-a----    18/03/2019  11:45 p. m.          30208 netiougc.exe
+-a----    18/03/2019  11:43 p. m.          40448 Netplwiz.exe
+-a----    18/03/2019  11:45 p. m.          93184 netsh.exe
+-a----    18/03/2019  11:45 p. m.          38400 NETSTAT.EXE
+-a----    18/03/2019  11:45 p. m.          71680 newdev.exe
+-a----    18/03/2019  11:45 p. m.         506184 NgcIso.exe
+-a----      6/10/2019  3:03 p. m.         529408 nltest.exe
+-a----     19/03/2019  7:46 a. m.         129552 nmbind.exe
+-a----     19/03/2019  7:46 a. m.         140304 nmscrub.exe
+-a----    18/03/2019  11:45 p. m.         181248 notepad.exe
+-a----    18/03/2019  11:44 p. m.          86528 nslookup.exe
+-a----     14/02/2020  9:41 a. m.        9929016 ntoskrnl.exe
+-a----    18/03/2019  11:45 p. m.          64000 ntprint.exe
+-a----    27/12/2019  10:12 p. m.         451320 nvdebugdump.exe
+-a----    27/12/2019  10:12 p. m.         573784 nvidia-smi.exe
+-a----     14/02/2020  9:42 a. m.         192824 nvspinfo.exe
+-a----    18/03/2019  11:45 p. m.          73728 odbcad32.exe
+-a----    18/03/2019  11:45 p. m.          26112 odbcconf.exe
+-a----    18/03/2019  11:43 p. m.          86528 ofdeploy.exe
+-a----    18/03/2019  11:44 p. m.         330240 omadmclient.exe
+-a----    18/03/2019  11:44 p. m.          62976 omadmprc.exe
+-a----    18/03/2019  11:45 p. m.          72704 openfiles.exe
+-a----     13/10/2019  6:04 p. m.         119840 OpenWith.exe
+-a----    18/03/2019  11:45 p. m.         112128 OptionalFeatures.exe
+-a----    15/11/2019  10:52 a. m.         642560 osk.exe
+-a----    15/11/2019  10:52 a. m.          12288 pacjsworker.exe
+-a----    18/03/2019  11:44 p. m.          39424 PackagedCWALauncher.exe
+-a----    18/03/2019  11:43 p. m.          45120 PasswordOnWakeSettingFlyout.exe
+-a----    18/03/2019  11:45 p. m.          19456 PATHPING.EXE
+-a----    15/11/2019  10:52 a. m.          51200 pcalua.exe
+-a----    18/03/2019  11:44 p. m.         158208 pcaui.exe
+-a----    18/03/2019  11:45 p. m.          15872 pcwrun.exe
+-a----    18/03/2019  11:45 p. m.         176640 perfmon.exe
+-a----      6/10/2019  3:03 p. m.         115120 phoneactivate.exe
+-a----    18/03/2019  11:44 p. m.         122872 PickerHost.exe
+-a----    18/03/2019  11:43 p. m.         111104 PinEnrollmentBroker.exe
+-a----    18/03/2019  11:45 p. m.          21504 PING.EXE
+-a----    18/03/2019  11:46 p. m.         217088 PkgMgr.exe
+-a----    18/03/2019  11:45 p. m.         172552 PktMon.exe
+-a----    18/03/2019  11:45 p. m.          10752 plasrv.exe
+-a----    18/03/2019  11:45 p. m.          59904 PnPUnattend.exe
+-a----    18/03/2019  11:44 p. m.         281088 pnputil.exe
+-a----    16/01/2020  12:07 a. m.         492544 poqexec.exe
+-a----    18/03/2019  11:44 p. m.          43520 pospaymentsworker.exe
+-a----    18/03/2019  11:45 p. m.          96256 powercfg.exe
+-a----    18/03/2019  11:46 p. m.         279552 PresentationHost.exe
+-a----    18/03/2019  11:45 p. m.          28672 prevhost.exe
+-a----    18/03/2019  11:45 p. m.          16896 print.exe
+-a----    13/12/2019  12:34 a. m.         826368 printfilterpipelinesvc.exe
+-a----    18/03/2019  11:43 p. m.          76800 PrintIsolationHost.exe
+-a----     14/02/2020  9:41 a. m.          64000 printui.exe
+-a----    18/03/2019  11:44 p. m.          47616 proquota.exe
+-a----    18/03/2019  11:45 p. m.          61440 provlaunch.exe
+-a----     16/01/2020  7:37 p. m.          83456 provtool.exe
+-a----      6/10/2019  3:03 p. m.         261016 ProximityUxHost.exe
+-a----    18/03/2019  11:44 p. m.          21352 prproc.exe
+-a----    18/03/2019  11:44 p. m.         228864 psr.exe
+-a----    18/03/2019  11:45 p. m.          35328 pwlauncher.exe
+-a----     19/03/2019  7:00 a. m.         641024 quickassist.exe
+-a----    18/03/2019  11:45 p. m.          17920 rasautou.exe
+-a----    18/03/2019  11:45 p. m.          19968 rasdial.exe
+-a----    18/03/2019  11:46 p. m.         134144 raserver.exe
+-a----    18/03/2019  11:45 p. m.          35328 rasphone.exe
+-a----     14/02/2020  9:42 a. m.         450560 rdpclip.exe
+-a----    18/03/2019  11:45 p. m.         206848 rdpinput.exe
+-a----    18/03/2019  11:45 p. m.          71680 RdpSa.exe
+-a----    18/03/2019  11:45 p. m.          56320 RdpSaProxy.exe
+-a----    18/03/2019  11:45 p. m.          32768 RdpSaUacHelper.exe
+-a----    18/03/2019  11:44 p. m.          46592 rdrleakdiag.exe
+-a----    18/03/2019  11:44 p. m.          39936 ReAgentc.exe
+-a----     14/02/2020  9:42 a. m.         194560 recdisc.exe
+-a----    18/03/2019  11:45 p. m.          13824 recover.exe
+-a----     13/10/2019  6:04 p. m.         893952 RecoveryDrive.exe
+-a----    18/03/2019  11:44 p. m.         988672 refsutil.exe
+-a----    15/11/2019  10:53 a. m.          74240 reg.exe
+-a----    18/03/2019  11:45 p. m.          11776 regedt32.exe
+-a----    18/03/2019  11:45 p. m.          46592 regini.exe
+-a----    18/03/2019  11:44 p. m.          29184 Register-CimProvider.exe
+-a----    18/03/2019  11:45 p. m.          24064 regsvr32.exe
+-a----    18/03/2019  11:44 p. m.         118784 rekeywiz.exe
+-a----    18/03/2019  11:45 p. m.          53760 relog.exe
+-a----    18/03/2019  11:44 p. m.         160256 RelPost.exe
+-a----    18/03/2019  11:44 p. m.          12800 RemotePosWorker.exe
+-a----     19/03/2019  7:02 a. m.         128000 repair-bde.exe
+-a----    18/03/2019  11:45 p. m.          21504 replace.exe
+-a----     14/02/2020  9:42 a. m.          19768 ResetEngine.exe
+-a----    18/03/2019  11:45 p. m.         110592 resmon.exe
+-a----    18/03/2019  11:43 p. m.         574464 RMActivate.exe
+-a----    18/03/2019  11:43 p. m.         603648 RMActivate_isv.exe
+-a----    18/03/2019  11:43 p. m.         499200 RMActivate_ssp.exe
+-a----    18/03/2019  11:43 p. m.         499200 RMActivate_ssp_isv.exe
+-a----    18/03/2019  11:45 p. m.          17920 RmClient.exe
+-a----    18/03/2019  11:44 p. m.         134656 rmttpmvscmgrsvr.exe
+-a----    18/03/2019  11:45 p. m.         134656 Robocopy.exe
+-a----    18/03/2019  11:45 p. m.          24576 ROUTE.EXE
+-a----    18/03/2019  11:44 p. m.          30720 RpcPing.exe
+-a----     19/03/2019  7:02 a. m.          47104 rrinstaller.exe
+-a----     14/02/2020  9:42 a. m.         268800 rstrui.exe
+-a----    24/01/2019  12:53 a. m.         833312 RtkAudUService64.exe
+-a----    18/03/2019  11:45 p. m.          19968 runas.exe
+-a----    18/03/2019  11:45 p. m.          71168 rundll32.exe
+-a----     14/02/2020  9:41 a. m.          58880 runexehelper.exe
+-a----    18/03/2019  11:43 p. m.          73216 RunLegacyCPLElevated.exe
+-a----    18/03/2019  11:44 p. m.          59392 runonce.exe
+-a----    18/03/2019  11:44 p. m.          96576 RuntimeBroker.exe
+-a----    18/03/2019  11:45 p. m.          69632 sc.exe
+-a----      6/10/2019  3:03 p. m.         227328 schtasks.exe
+-a----    18/03/2019  11:44 p. m.          24064 sdbinst.exe
+-a----    18/03/2019  11:46 p. m.          50176 sdchange.exe
+-a----     14/02/2020  9:42 a. m.        1216000 sdclt.exe
+-a----    18/03/2019  11:45 p. m.          25600 sdiagnhost.exe
+-a----     14/02/2020  9:41 a. m.         240640 SearchFilterHost.exe
+-a----     14/02/2020  9:41 a. m.         851968 SearchIndexer.exe
+-a----     14/02/2020  9:41 a. m.         401408 SearchProtocolHost.exe
+-a----    18/03/2019  11:45 p. m.          39936 SecEdit.exe
+-a----    18/03/2019  11:44 p. m.          10752 secinit.exe
+-a----     14/02/2020  9:41 a. m.         774664 securekernel.exe
+-a----     14/02/2020  9:41 a. m.          63288 SecurityHealthHost.exe
+-a----     14/02/2020  9:41 a. m.         928120 SecurityHealthService.exe
+-a----     14/02/2020  9:41 a. m.          84992 SecurityHealthSystray.exe
+-a----    18/03/2019  11:45 p. m.        1264128 SensorDataService.exe
+-a----    13/12/2019  12:34 a. m.         674280 services.exe
+-a----    18/03/2019  11:45 p. m.          75064 sessionmsg.exe
+-a----    15/11/2019  10:52 a. m.         100352 sethc.exe
+-a----    18/03/2019  11:45 p. m.          29184 setspn.exe
+-a----      6/10/2019  3:03 p. m.         928776 SettingSyncHost.exe
+-a----    18/03/2019  11:44 p. m.         122368 setupcl.exe
+-a----    18/03/2019  11:44 p. m.         128000 setupugc.exe
+-a----    18/03/2019  11:45 p. m.          55808 setx.exe
+-a----    18/03/2019  11:44 p. m.          47616 sfc.exe
+-a----    18/03/2019  11:45 p. m.         263904 SgrmBroker.exe
+-a----    18/03/2019  11:45 p. m.          54584 SgrmLpac.exe
+-a----    18/03/2019  11:44 p. m.          56832 shrpubw.exe
+-a----    18/03/2019  11:44 p. m.          26624 shutdown.exe
+-a----    18/03/2019  11:45 p. m.          75264 sigverif.exe
+-a----    18/03/2019  11:45 p. m.         299072 SIHClient.exe
+-a----    18/03/2019  11:44 p. m.         106496 sihost.exe
+-a----    18/03/2019  11:43 p. m.          20120 SlideToShutDown.exe
+-a----    18/03/2019  11:44 p. m.         460800 slui.exe
+-a----    18/03/2019  11:44 p. m.        2759680 smartscreen.exe
+-a----      6/10/2019  3:03 p. m.         147184 smss.exe
+-a----    18/03/2019  11:44 p. m.         264152 SndVol.exe
+-a----    18/03/2019  11:45 p. m.        3379712 SnippingTool.exe
+-a----    18/03/2019  11:44 p. m.          15872 snmptrap.exe
+-a----    18/03/2019  11:45 p. m.          27648 sort.exe
+-a----    18/03/2019  11:45 p. m.         137728 SpaceAgent.exe
+-a----    18/03/2019  11:45 p. m.          45072 spaceman.exe
+-a----     14/02/2020  9:41 a. m.         169472 SpatialAudioLicenseSrv.exe
+-a----      6/10/2019  3:03 p. m.         986112 Spectrum.exe
+-a----    15/11/2019  10:52 a. m.         765440 spoolsv.exe
+-a----     14/02/2020  9:41 a. m.         578560 SppExtComObj.Exe
+-a----     14/02/2020  9:41 a. m.        4562896 sppsvc.exe
+-a----    18/03/2019  11:45 p. m.          18944 srdelayed.exe
+-a----     14/02/2020  9:42 a. m.          57856 SrTasks.exe
+-a----    18/03/2019  11:45 p. m.          93184 stordiag.exe
+-a----    18/03/2019  11:45 p. m.          16384 subst.exe
+-a----    18/03/2019  11:44 p. m.          53744 svchost.exe
+-a----    18/03/2019  11:44 p. m.          36352 sxstrace.exe
+-a----    18/03/2019  11:45 p. m.          45568 SyncHost.exe
+-a----     30/08/2018  3:57 a. m.        4512352 SynTPEnh.exe
+-a----     30/08/2018  3:57 a. m.         399440 SynTPEnhService.exe
+-a----     30/08/2018  3:57 a. m.         250960 SynTPHelper.exe
+-a----     14/02/2020  9:42 a. m.          42512 SysResetErr.exe
+-a----    18/03/2019  11:45 p. m.         102912 systeminfo.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesAdvanced.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesComputerName.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesDataExecutionPrevention.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesHardware.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesPerformance.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesProtection.exe
+-a----    18/03/2019  11:44 p. m.          83968 SystemPropertiesRemote.exe
+-a----     14/02/2020  9:42 a. m.         510768 systemreset.exe
+-a----    15/11/2019  10:52 a. m.         522176 SystemSettingsAdminFlows.exe
+-a----    18/03/2019  11:43 p. m.         204520 SystemSettingsBroker.exe
+-a----    18/03/2019  11:45 p. m.          40976 SystemSettingsRemoveDevice.exe
+-a----    18/03/2019  11:44 p. m.          82432 SystemUWPLauncher.exe
+-a----    18/03/2019  11:43 p. m.          11264 systray.exe
+-a----    18/03/2019  11:45 p. m.          83456 tabcal.exe
+-a----    18/03/2019  11:45 p. m.          62976 takeown.exe
+-a----    18/03/2019  11:45 p. m.          14848 TapiUnattend.exe
+-a----    18/03/2019  11:45 p. m.          50688 tar.exe
+-a----     13/10/2019  6:04 p. m.          92624 taskhostw.exe
+-a----    18/03/2019  11:45 p. m.          95744 taskkill.exe
+-a----    18/03/2019  11:45 p. m.         101376 tasklist.exe
+-a----    18/03/2019  11:44 p. m.        1076856 Taskmgr.exe
+-a----     14/02/2020  9:41 a. m.         783480 tcblaunch.exe
+-a----    18/03/2019  11:45 p. m.          16384 tcmsetup.exe
+-a----    18/03/2019  11:45 p. m.          12800 TCPSVCS.EXE
+-a----    18/03/2019  11:45 p. m.          34304 ThumbnailExtractionHost.exe
+-a----    18/03/2019  11:45 p. m.         316928 TieringEngineService.exe
+-a----    18/03/2019  11:45 p. m.          31232 timeout.exe
+-a----      6/10/2019  3:03 p. m.          36864 TokenBrokerCookies.exe
+-a----    18/03/2019  11:43 p. m.          71168 TpmInit.exe
+-a----    18/03/2019  11:44 p. m.         106496 tpmvscmgr.exe
+-a----    18/03/2019  11:44 p. m.         136192 tpmvscmgrsvr.exe
+-a----    18/03/2019  11:45 p. m.         415744 tracerpt.exe
+-a----    18/03/2019  11:45 p. m.          17920 TRACERT.EXE
+-a----    18/03/2019  11:45 p. m.          55296 TSTheme.exe
+-a----    18/03/2019  11:45 p. m.          94720 TSWbPrxy.exe
+-a----      6/10/2019  2:46 p. m.          35592 TsWpfWrp.exe
+-a----    18/03/2019  11:44 p. m.         258712 ttdinject.exe
+-a----    18/03/2019  11:44 p. m.         377656 tttracer.exe
+-a----    18/03/2019  11:45 p. m.          48128 typeperf.exe
+-a----    18/03/2019  11:44 p. m.          62464 tzsync.exe
+-a----    18/03/2019  11:43 p. m.          58880 tzutil.exe
+-a----    18/03/2019  11:44 p. m.          56848 ucsvc.exe
+-a----    18/03/2019  11:44 p. m.          36864 UIMgrBroker.exe
+-a----    18/03/2019  11:44 p. m.          41472 unlodctr.exe
+-a----     19/03/2019  7:00 a. m.         255488 unregmp2.exe
+-a----    18/03/2019  11:44 p. m.         118288 upfc.exe
+-a----      6/10/2019  3:03 p. m.          43008 UpgradeResultsUI.exe
+-a----    15/11/2019  10:53 a. m.          40960 upnpcont.exe
+-a----    18/03/2019  11:43 p. m.          47000 UserAccountBroker.exe
+-a----    18/03/2019  11:44 p. m.         100352 UserAccountControlSettings.exe
+-a----    18/03/2019  11:44 p. m.          33792 userinit.exe
+-a----     14/02/2020  9:41 a. m.          69120 UsoClient.exe
+-a----     14/02/2020  9:41 a. m.        1480192 usocoreworker.exe
+-a----    15/11/2019  10:52 a. m.         129024 UtcDecoderHost.exe
+-a----    15/11/2019  10:52 a. m.         118784 Utilman.exe
+-a----    18/03/2019  11:44 p. m.          30208 VaultCmd.exe
+-a----      6/10/2019  3:03 p. m.         640512 vds.exe
+-a----      6/10/2019  3:03 p. m.          26112 vdsldr.exe
+-a----    18/03/2019  11:45 p. m.          13824 verclsid.exe
+-a----    18/03/2019  11:44 p. m.         171320 verifier.exe
+-a----    18/03/2019  11:44 p. m.         190976 verifiergui.exe
+-a----    18/03/2019  11:45 p. m.         144384 vssadmin.exe
+-a----    18/03/2019  11:44 p. m.        1446400 VSSVC.exe
+-a----    27/12/2019  10:14 p. m.        1729440 vulkaninfo-1-999-0-0-0.exe
+-a----    27/12/2019  10:14 p. m.        1729440 vulkaninfo.exe
+-a----    18/03/2019  11:43 p. m.         104960 w32tm.exe
+-a----     14/02/2020  9:41 a. m.          89088 WaaSMedicAgent.exe
+-a----    18/03/2019  11:45 p. m.          40448 waitfor.exe
+-a----    18/03/2019  11:45 p. m.          23040 WallpaperHost.exe
+-a----    18/03/2019  11:46 p. m.         321536 wbadmin.exe
+-a----     14/02/2020  9:42 a. m.        1541632 wbengine.exe
+-a----    18/03/2019  11:45 p. m.         103936 wecutil.exe
+-a----     14/02/2020  9:41 a. m.         518456 WerFault.exe
+-a----     14/02/2020  9:41 a. m.         165832 WerFaultSecure.exe
+-a----     14/02/2020  9:41 a. m.         220984 wermgr.exe
+-a----    18/03/2019  11:44 p. m.         260096 wevtutil.exe
+-a----    18/03/2019  11:45 p. m.         144384 wextract.exe
+-a----    18/03/2019  11:46 p. m.         928768 WFS.exe
+-a----    18/03/2019  11:45 p. m.          40960 where.exe
+-a----    18/03/2019  11:45 p. m.          71168 whoami.exe
+-a----    18/03/2019  11:45 p. m.          95744 wiaacmgr.exe
+-a----    18/03/2019  11:45 p. m.          37888 wiawow64.exe
+-a----     14/02/2020  9:41 a. m.         128528 wifitask.exe
+-a----     14/02/2020  9:41 a. m.         516648 wimserv.exe
+-a----    18/03/2019  11:46 p. m.          80896 WinBioDataModelOOBE.exe
+-a----    18/03/2019  11:44 p. m.          13824 Windows.Media.BackgroundPlayback.exe
+-a----    18/03/2019  11:44 p. m.          68608 Windows.WARP.JITService.exe
+-a----    18/03/2019  11:45 p. m.          60928 WindowsActionDialog.exe
+-a----    18/03/2019  11:44 p. m.          47616 WindowsUpdateElevatedInstaller.exe
+-a----     13/10/2019  6:04 p. m.         398728 wininit.exe
+-a----     14/02/2020  9:41 a. m.        1512320 winload.exe
+-a----    15/11/2019  10:52 a. m.         844800 winlogon.exe
+-a----     14/02/2020  9:41 a. m.        1182232 winresume.exe
+-a----    18/03/2019  11:44 p. m.          50176 winrs.exe
+-a----    18/03/2019  11:44 p. m.          28672 winrshost.exe
+-a----    18/03/2019  11:44 p. m.          20480 WinRTNetMUAHostServer.exe
+-a----    18/03/2019  11:45 p. m.        2799616 WinSAT.exe
+-a----    18/03/2019  11:44 p. m.          58880 winver.exe
+-a----    18/03/2019  11:45 p. m.         289936 wkspbroker.exe
+-a----    18/03/2019  11:44 p. m.         464896 wksprt.exe
+-a----    18/03/2019  11:43 p. m.         103424 wlanext.exe
+-a----    18/03/2019  11:44 p. m.          66328 wlrmdr.exe
+-a----     19/03/2019  7:02 a. m.        1532928 WMPDMC.exe
+-a----      6/10/2019  3:03 p. m.         105472 WorkFolders.exe
+-a----    18/03/2019  11:45 p. m.          17408 wowreg32.exe
+-a----    15/11/2019  10:52 a. m.        1259416 WpcMon.exe
+-a----    15/11/2019  10:52 a. m.         278016 WpcTok.exe
+-a----     19/03/2019  7:02 a. m.          30208 WPDShextAutoplay.exe
+-a----    18/03/2019  11:45 p. m.          22016 wpnpinst.exe
+-a----    18/03/2019  11:44 p. m.         343552 wpr.exe
+-a----    18/03/2019  11:45 p. m.          11264 write.exe
+-a----    15/11/2019  10:52 a. m.           9216 wscadminui.exe
+-a----    18/03/2019  11:44 p. m.          94720 WSCollect.exe
+-a----    18/03/2019  11:45 p. m.         165888 wscript.exe
+-a----      6/10/2019  3:03 p. m.         142848 wsl.exe
+-a----     19/03/2019  7:46 a. m.         110080 wslconfig.exe
+-a----    18/03/2019  11:44 p. m.          41984 WSManHTTPConfig.exe
+-a----    18/03/2019  11:44 p. m.          46080 wsmprovhost.exe
+-a----     14/02/2020  9:41 a. m.          92160 wsqmcons.exe
+-a----      6/10/2019  3:03 p. m.          93696 WSReset.exe
+-a----    18/03/2019  11:44 p. m.          11264 wuapihost.exe
+-a----     14/02/2020  9:41 a. m.          47208 wuauclt.exe
+-a----    18/03/2019  11:44 p. m.         156744 WUDFCompanionHost.exe
+-a----    18/03/2019  11:44 p. m.         256000 WUDFHost.exe
+-a----    18/03/2019  11:44 p. m.         310272 wusa.exe
+-a----    18/03/2019  11:44 p. m.         984592 WWAHost.exe
+-a----    18/03/2019  11:43 p. m.          32768 XblGameSaveTask.exe
+-a----    18/03/2019  11:45 p. m.          47616 xcopy.exe
+-a----    18/03/2019  11:45 p. m.          62976 xwizard.exe
+
+
+PS C:\Users\USUARIO> Get-HotFix
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+MSI           Update           KB4534132     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Security Update  KB4515383     NT AUTHORITY\SYSTEM  6/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4516115     NT AUTHORITY\SYSTEM  14/10/2019 12:00:00 a. m.
+MSI           Update           KB4517245     NT AUTHORITY\SYSTEM  28/12/2019 12:00:00 a. m.
+MSI           Security Update  KB4521863     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4524569     NT AUTHORITY\SYSTEM  15/11/2019 12:00:00 a. m.
+MSI           Security Update  KB4528759     NT AUTHORITY\SYSTEM  17/01/2020 12:00:00 a. m.
+MSI           Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Security Update  KB4538674     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Update           KB4532693     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+
+
+PS C:\Users\USUARIO> Get-HotFix | where -filter {$_.description -like "*security*"}
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+MSI           Security Update  KB4515383     NT AUTHORITY\SYSTEM  6/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4516115     NT AUTHORITY\SYSTEM  14/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4521863     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4524569     NT AUTHORITY\SYSTEM  15/11/2019 12:00:00 a. m.
+MSI           Security Update  KB4528759     NT AUTHORITY\SYSTEM  17/01/2020 12:00:00 a. m.
+MSI           Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Security Update  KB4538674     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+
+
+PS C:\Users\USUARIO> Get-HotFix | gm
+
+
+   TypeName: System.Management.ManagementObject#root\cimv2\Win32_QuickFixEngineering
+
+Name                MemberType     Definition
+----                ----------     ----------
+PSComputerName      AliasProperty  PSComputerName = __SERVER
+Caption             Property       string Caption {get;set;}
+CSName              Property       string CSName {get;set;}
+Description         Property       string Description {get;set;}
+FixComments         Property       string FixComments {get;set;}
+HotFixID            Property       string HotFixID {get;set;}
+InstallDate         Property       string InstallDate {get;set;}
+InstalledBy         Property       string InstalledBy {get;set;}
+Name                Property       string Name {get;set;}
+ServicePackInEffect Property       string ServicePackInEffect {get;set;}
+Status              Property       string Status {get;set;}
+__CLASS             Property       string __CLASS {get;set;}
+__DERIVATION        Property       string[] __DERIVATION {get;set;}
+__DYNASTY           Property       string __DYNASTY {get;set;}
+__GENUS             Property       int __GENUS {get;set;}
+__NAMESPACE         Property       string __NAMESPACE {get;set;}
+__PATH              Property       string __PATH {get;set;}
+__PROPERTY_COUNT    Property       int __PROPERTY_COUNT {get;set;}
+__RELPATH           Property       string __RELPATH {get;set;}
+__SERVER            Property       string __SERVER {get;set;}
+__SUPERCLASS        Property       string __SUPERCLASS {get;set;}
+PSStatus            PropertySet    PSStatus {__PATH, Status}
+ConvertFromDateTime ScriptMethod   System.Object ConvertFromDateTime();
+ConvertToDateTime   ScriptMethod   System.Object ConvertToDateTime();
+InstalledOn         ScriptProperty System.Object InstalledOn {get=if ([environment]::osversion.version.build -ge 7000)...
+
+
+PS C:\Users\USUARIO> Get-HotFix | where -filter {$_.installedBy -like "*SYSTEM*"}
+
+Source        Description      HotFixID      InstalledBy          InstalledOn
+------        -----------      --------      -----------          -----------
+MSI           Update           KB4534132     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Security Update  KB4515383     NT AUTHORITY\SYSTEM  6/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4516115     NT AUTHORITY\SYSTEM  14/10/2019 12:00:00 a. m.
+MSI           Update           KB4517245     NT AUTHORITY\SYSTEM  28/12/2019 12:00:00 a. m.
+MSI           Security Update  KB4521863     NT AUTHORITY\SYSTEM  9/10/2019 12:00:00 a. m.
+MSI           Security Update  KB4524569     NT AUTHORITY\SYSTEM  15/11/2019 12:00:00 a. m.
+MSI           Security Update  KB4528759     NT AUTHORITY\SYSTEM  17/01/2020 12:00:00 a. m.
+MSI           Security Update  KB4537759     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Security Update  KB4538674     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+MSI           Update           KB4532693     NT AUTHORITY\SYSTEM  14/02/2020 12:00:00 a. m.
+
+
+PS C:\Users\USUARIO> Get-EventLog -List | fl -Property @{n='nombreLog'; e={$_.Log}}, @{n='Per-Retencion';e={$_.minimumRetentionDays}}
+
+
+nombreLog     : Application
+Per-Retencion : 0
+
+nombreLog     : HardwareEvents
+Per-Retencion : 0
+
+nombreLog     : Internet Explorer
+Per-Retencion : 7
+
+nombreLog     : Key Management Service
+Per-Retencion : 0
+
+nombreLog     : OAlerts
+Per-Retencion : 0
+
+nombreLog     : Security
+Per-Retencion :
+
+nombreLog     : System
+Per-Retencion : 0
+
+nombreLog     : Windows PowerShell
+Per-Retencion : 0
+
+
+
+PS C:\Users\USUARIO> Get-Service |Sort-Object status | fl -GroupBy status
+
+
+   Status: Stopped
+
+
+Name                : AarSvc_9c96024
+DisplayName         : Agent Activation Runtime_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : PrintWorkflowUserSvc_9c96024
+DisplayName         : PrintWorkflow_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : PushToInstall
+DisplayName         : Servicio PushToInstall de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : RasAuto
+DisplayName         : Administrador de conexiones automáticas de acceso remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RasAcd}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RemoteAccess
+DisplayName         : Enrutamiento y acceso remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {Http, RasMan, RpcSS, Bfe}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RemoteRegistry
+DisplayName         : Registro remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RetailDemo
+DisplayName         : Servicio de prueba comercial
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RpcLocator
+DisplayName         : Ubicador de llamada a procedimiento remoto (RPC)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : SCardSvr
+DisplayName         : Tarjeta inteligente
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : ScDeviceEnum
+DisplayName         : Servicio de enumeración de dispositivos de tarjeta inteligente
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : SCPolicySvc
+DisplayName         : Directiva de extracción de tarjetas inteligentes
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : PrintNotify
+DisplayName         : Extensiones y notificaciones de impresora
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess, InteractiveProcess
+
+Name                : SDRSVC
+DisplayName         : Copias de seguridad de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : SensorDataService
+DisplayName         : Servicio de datos del sensor
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : SensorService
+DisplayName         : Servicio de sensores
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : SensrSvc
+DisplayName         : Servicio de supervisión de sensores
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : SessionEnv
+DisplayName         : Configuración de Escritorio remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS, LanmanWorkstation}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : SharedRealitySvc
+DisplayName         : Servicio de datos espacial
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : shpamsvc
+DisplayName         : Shared PC Account Manager
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, ProfSvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : smphost
+DisplayName         : SMP de Espacios de almacenamiento de Microsoft
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : SmsRouter
+DisplayName         : Servicio enrutador de SMS de Microsoft Windows.
+Status              : Stopped
+DependentServices   :
+ServicesDependedOn  : {RpcSs, NdisUio}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SNMPTRAP
+DisplayName         : Captura de SNMP
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : spectrum
+DisplayName         : Servicio de percepción de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : seclogon
+DisplayName         : Inicio de sesión secundario
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : sppsvc
+DisplayName         : Protección de software
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : PolicyAgent
+DisplayName         : Agente de directiva IPsec
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {Tcpip, bfe}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : PNRPAutoReg
+DisplayName         : Servicio de publicación de nombres de equipo PNRP
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {pnrpsvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : MapsBroker
+DisplayName         : Administrador de mapas descargados
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : MessagingService_9c96024
+DisplayName         : MessagingService_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : MSDTC
+DisplayName         : Coordinador de transacciones distribuidas
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS, SamSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : MSiSCSI
+DisplayName         : Servicio del iniciador iSCSI de Microsoft
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : msiserver
+DisplayName         : Windows Installer
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : MyWiFiDHCPDNS
+DisplayName         : Wireless PAN DHCP Server
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : NaturalAuthentication
+DisplayName         : Autenticación natural
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, Schedule, ProfSvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : NcaSvc
+DisplayName         : Asistente para la conectividad de red
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {NSI, dnscache, iphlpsvc, BFE}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : NcdAutoSetup
+DisplayName         : Configuración automática de dispositivos conectados a la red
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {netprofm}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Netlogon
+DisplayName         : Net Logon
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {LanmanWorkstation}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : PNRPsvc
+DisplayName         : Protocolo de resolución de nombres de mismo nivel
+Status              : Stopped
+DependentServices   : {PNRPAutoReg, p2psvc}
+ServicesDependedOn  : {p2pimsvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : NetSetupSvc
+DisplayName         : Servicio de configuración de red
+Status              : Stopped
+DependentServices   : {xTendUtilityService, xTendSoftAPService}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : NgcCtnrSvc
+DisplayName         : Contenedor de Microsoft Passport
+Status              : Stopped
+DependentServices   :
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : NgcSvc
+DisplayName         : Microsoft Passport
+Status              : Stopped
+DependentServices   :
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : NvContainerNetworkService
+DisplayName         : NVIDIA NetworkService Container
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : ose64
+DisplayName         : Office 64 Source Engine
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : p2pimsvc
+DisplayName         : Administrador de identidad de redes de mismo nivel
+Status              : Stopped
+DependentServices   : {PNRPAutoReg, p2psvc, PNRPsvc}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : perceptionsimulation
+DisplayName         : Servicio de simulación de percepción de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : PerfHost
+DisplayName         : DLL de host del Contador de rendimiento
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : PhoneSvc
+DisplayName         : Servicio telefónico
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : PimIndexMaintenanceSvc_9c96024
+DisplayName         : Datos de contactos_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : pla
+DisplayName         : Registros y alertas de rendimiento
+Status              : Stopped
+DependentServices   :
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : NetTcpPortSharing
+DisplayName         : Servicio de uso compartido de puertos Net.Tcp
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : ssh-agent
+DisplayName         : OpenSSH Authentication Agent
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : svsvc
+DisplayName         : Comprobador puntual
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : swprv
+DisplayName         : Proveedor de instantáneas de software de Microsoft
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : Wecsvc
+DisplayName         : Recopilador de eventos de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {Eventlog, HTTP}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WEPHOSTSVC
+DisplayName         : Servicio host de proveedor de cifrado de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : wercplsupport
+DisplayName         : Ayuda del Panel de control de Informes de problemas y soluciones
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WerSvc
+DisplayName         : Servicio Informe de errores de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : WFDSConMgrSvc
+DisplayName         : Servicio de administrador de conexiones con servicios Wi-Fi Direct
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WiaRpc
+DisplayName         : Eventos de adquisición de imágenes estáticas
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WinRM
+DisplayName         : Administración remota de Windows (WS-Management)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS, HTTP}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : wisvc
+DisplayName         : Servicio de Windows Insider
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : wlidsvc
+DisplayName         : Ayudante para el inicio de sesión de cuenta Microsoft
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : wlpasvc
+DisplayName         : Servicio de asistente para perfil local
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, WwanSvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WdiSystemHost
+DisplayName         : Host de sistema de diagnóstico
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WManSvc
+DisplayName         : Servicio de administración de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WMPNetworkSvc
+DisplayName         : Servicio de uso compartido de red del Reproductor de Windows Media
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {WSearch, http}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : workfolderssvc
+DisplayName         : Carpetas de trabajo
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, wsearch}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WpcMonSvc
+DisplayName         : Control parental
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : WPDBusEnum
+DisplayName         : Servicio enumerador de dispositivos portátiles
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WwanSvc
+DisplayName         : Configuración automática de WWAN
+Status              : Stopped
+DependentServices   : {wlpasvc}
+ServicesDependedOn  : {RpcSs, NdisUio}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : XblAuthManager
+DisplayName         : Administración de autenticación de Xbox Live
+Status              : Stopped
+DependentServices   : {XblGameSave}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : XblGameSave
+DisplayName         : Partida guardada en Xbox Live
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {XblAuthManager, UserManager}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : XboxGipSvc
+DisplayName         : Xbox Accessory Management Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : XboxNetApiSvc
+DisplayName         : Servicio de red de Xbox Live
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {KeyIso, IKEEXT, mpssvc, BFE}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : xTendSoftAPService
+DisplayName         : xTendSoftAPService
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {Netman, NetSetupSvc, WlanSvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : wmiApSrv
+DisplayName         : Adaptador de rendimiento de WMI
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : wcncsvc
+DisplayName         : Registrador de configuración de Windows Connect Now
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : wbengine
+DisplayName         : Servicio del módulo de copia de seguridad a nivel de bloque
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : WarpJITSvc
+DisplayName         : WarpJITSvc
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : TapiSrv
+DisplayName         : Telefonía
+Status              : Stopped
+DependentServices   : {Fax}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : TermService
+DisplayName         : Servicios de Escritorio remoto
+Status              : Stopped
+DependentServices   : {UmRdpService}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : TieringEngineService
+DisplayName         : Administración de capas de almacenamiento
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : TroubleshootingSvc
+DisplayName         : Servicio de solución de problemas recomendado
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : TrustedInstaller
+DisplayName         : Instalador de módulos de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : tzautoupdate
+DisplayName         : Actualizador de zona horaria automática
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : UmRdpService
+DisplayName         : Redirector de puerto en modo usuario de Servicios de Escritorio remoto
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RDPDR, TermService}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : UnistoreSvc_9c96024
+DisplayName         : Almacenamiento de datos de usuarios_9c96024
+Status              : Stopped
+DependentServices   : {UserDataSvc_9c96024, PimIndexMaintenanceSvc_9c96024}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : UserDataSvc_9c96024
+DisplayName         : Acceso a datos de usuarios_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : VacSvc
+DisplayName         : Servicio Volumetric Audio Compositor
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : vds
+DisplayName         : Disco virtual
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : vmicguestinterface
+DisplayName         : Interfaz de servicio invitado de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmicheartbeat
+DisplayName         : Servicio de latido de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmickvpexchange
+DisplayName         : Servicio de intercambio de datos de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmicrdv
+DisplayName         : Servicio de virtualización de Escritorio remoto de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmicshutdown
+DisplayName         : Servicio de cierre de invitado de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmictimesync
+DisplayName         : Servicio de sincronización de hora de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {VmGid}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmicvmsession
+DisplayName         : Servicio PowerShell Direct de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : vmicvss
+DisplayName         : Solicitante de instantáneas de volumen de Hyper-V
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : VSS
+DisplayName         : Instantáneas de volumen
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : W32Time
+DisplayName         : Hora de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WaaSMedicSvc
+DisplayName         : Windows Update Medic Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WalletService
+DisplayName         : WalletService
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : LxssManager
+DisplayName         : LxssManager
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : LxpSvc
+DisplayName         : Servicio de experiencia de idioma
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : p2psvc
+DisplayName         : Agrupación de red del mismo nivel
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {PNRPSvc, p2pimsvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : dmwappushservice
+DisplayName         : Servicio de enrutamiento de mensajes de inserción del Protocolo de aplicación inalámbrica (WAP) de
+                      administración de dispositivos
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : ConsentUxUserSvc_9c96024
+DisplayName         : ConsentUX_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : BluetoothUserService_9c96024
+DisplayName         : Servicio de soporte técnico de usuario de Bluetooth_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : DsmSvc
+DisplayName         : Administrador de configuración de dispositivos
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : iaStorAfsService
+DisplayName         : Intel(R) Optane(TM) Memory Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {iaStorAfs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : HvHost
+DisplayName         : Servicio de host HV
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {hvservice}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : hidserv
+DisplayName         : Servicio de dispositivo de interfaz humana
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : gupdatem
+DisplayName         : Google Update Servicio (gupdatem)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : BTAGService
+DisplayName         : Servicio de puerta de enlace de audio de Bluetooth
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : gupdate
+DisplayName         : Google Update Servicio (gupdate)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : GraphicsPerfSvc
+DisplayName         : GraphicsPerfSvc
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : gpsvc
+DisplayName         : Cliente de directiva de grupo
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS, Mup}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : bthserv
+DisplayName         : Servicio de compatibilidad con Bluetooth
+Status              : Stopped
+DependentServices   : {BluetoothUserService_9c96024, BluetoothUserService}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : GoogleChromeElevationService
+DisplayName         : Google Chrome Elevation Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : FrameServer
+DisplayName         : Servicio FrameServer de la Cámara de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : DeviceAssociationBrokerSvc_9c96024
+DisplayName         : DeviceAssociationBroker_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : defragsvc
+DisplayName         : Optimizar unidades
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : CaptureService_9c96024
+DisplayName         : CaptureService_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : Eaphost
+DisplayName         : Protocolo de autenticación extensible
+Status              : Stopped
+DependentServices   : {dot3svc}
+ServicesDependedOn  : {RPCSS, KeyIso}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : fhsvc
+DisplayName         : Servicio de historial de archivos
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : EasyAntiCheat
+DisplayName         : EasyAntiCheat
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : CredentialEnrollmentManagerUserSvc_9c96024
+DisplayName         : CredentialEnrollmentManagerUserSvc_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 208
+
+Name                : Fax
+DisplayName         : Fax
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, TapiSrv, Spooler}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : embeddedmode
+DisplayName         : Modo incrustado
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {BrokerInfrastructure}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : EntAppSvc
+DisplayName         : Servicio de administración de aplicaciones de empresa
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : COMSysApp
+DisplayName         : Aplicación del sistema COM+
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {EventSystem, SENS, RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : icssvc
+DisplayName         : Servicio de zona con cobertura inalámbrica móvil de Windows
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, wcmsvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : dot3svc
+DisplayName         : Configuración automática de redes cableadas
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, Eaphost, Ndisuio}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : BITS
+DisplayName         : Servicio de transferencia inteligente en segundo plano (BITS)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : DeviceInstall
+DisplayName         : Servicio de instalación de dispositivos
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : KtmRm
+DisplayName         : KTMRM para DTC (Coordinador de transacciones distribuidas)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS, SamSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : AppIDSvc
+DisplayName         : Identidad de aplicación
+Status              : Stopped
+DependentServices   : {applockerfltr}
+ServicesDependedOn  : {RpcSs, CryptSvc, AppID}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : ALG
+DisplayName         : Servicio de puerta de enlace de nivel de aplicación
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : AJRouter
+DisplayName         : Servicio de enrutador de AllJoyn
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : AppXSvc
+DisplayName         : Servicio de implementación de AppX (AppXSVC)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss, staterepository}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : lltdsvc
+DisplayName         : Asignador de detección de topologías de nivel de vínculo
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss, lltdio}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : DmEnrollmentSvc
+DisplayName         : Servicio de inscripción de administración de dispositivos
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : diagnosticshub.standardcollector.service
+DisplayName         : Servicio Recopilador estándar del concentrador de diagnósticos de Microsoft (R)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : DevQueryBroker
+DisplayName         : Agente de detección en segundo plano de DevQuery
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : IpxlatCfgSvc
+DisplayName         : Servicio de configuración de traslación de IP
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {nsi}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : autotimesvc
+DisplayName         : Hora de la red de telefonía móvil
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : Intel(R) TPM Provisioning Service
+DisplayName         : Intel(R) TPM Provisioning Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : Intel(R) Capability Licensing Service TCP IP Interface
+DisplayName         : Intel(R) Capability Licensing Service TCP IP Interface
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : AxInstSV
+DisplayName         : Instalador de ActiveX (AxInstSV)
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : BcastDVRUserService_9c96024
+DisplayName         : Servicio de usuario de difusión y GameDVR_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : BDESVC
+DisplayName         : Servicio Cifrado de unidad BitLocker
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DevicePickerUserSvc_9c96024
+DisplayName         : DevicePicker_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : diagsvc
+DisplayName         : Diagnostic Execution Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : BEService
+DisplayName         : BattlEye Service
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : DevicesFlowUserSvc_9c96024
+DisplayName         : DevicesFlow_9c96024
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : 224
+
+Name                : AppReadiness
+DisplayName         : Preparación de aplicaciones
+Status              : Stopped
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+
+
+   Status: Running
+
+
+Name                : cplspcon
+DisplayName         : Intel(R) Content Protection HDCP Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : CryptSvc
+DisplayName         : Servicios de cifrado
+Status              : Running
+DependentServices   : {applockerfltr, AppIDSvc}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DcomLaunch
+DisplayName         : Iniciador de procesos de servidor DCOM
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : TrkWks
+DisplayName         : Cliente de seguimiento de vínculos distribuidos
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : TimeBrokerSvc
+DisplayName         : Agente de eventos de tiempo
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : VaultSvc
+DisplayName         : Administrador de credenciales
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : TokenBroker
+DisplayName         : Administrador de cuentas web
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {UserManager}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : UsoSvc
+DisplayName         : Servicio Orquestador de actualizaciones
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : upnphost
+DisplayName         : Dispositivo host de UPnP
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {HTTP, SSDPSRV}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Dhcp
+DisplayName         : Cliente DHCP
+Status              : Running
+DependentServices   : {NcaSvc, iphlpsvc, WinHttpAutoProxySvc, NcdAutoSetup...}
+ServicesDependedOn  : {Afd, NSI}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : UserManager
+DisplayName         : Administrador de usuarios
+Status              : Running
+DependentServices   : {XblGameSave, TokenBroker}
+ServicesDependedOn  : {RpcSs, ProfSvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DeviceAssociationService
+DisplayName         : Servicio de asociación de dispositivos
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Themes
+DisplayName         : Temas
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : cphs
+DisplayName         : Intel(R) Content Protection HECI Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : WdNisSvc
+DisplayName         : Servicio de inspección de red de Antivirus de Windows Defender
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {WdNisDrv}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : ClipSVC
+DisplayName         : Servicio de licencia de cliente (ClipSVC)
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : AdobeARMservice
+DisplayName         : Adobe Acrobat Update Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : Appinfo
+DisplayName         : Información de la aplicación
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs, ProfSvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : wuauserv
+DisplayName         : Windows Update
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WSearch
+DisplayName         : Windows Search
+Status              : Running
+DependentServices   : {workfolderssvc, WMPNetworkSvc}
+ServicesDependedOn  : {RPCSS, BrokerInfrastructure}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : wscsvc
+DisplayName         : Centro de seguridad
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WpnUserService_9c96024
+DisplayName         : Servicio de usuario de notificaciones de inserción de Windows_9c96024
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : 240
+
+Name                : WpnService
+DisplayName         : Servicio del sistema de notificaciones de inserción de Windows
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : AtherosSvc
+DisplayName         : AtherosSvc
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : AudioEndpointBuilder
+DisplayName         : Compilador de extremo de audio de Windows
+Status              : Running
+DependentServices   : {AarSvc_9c96024, AarSvc, Audiosrv}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Audiosrv
+DisplayName         : Audio de Windows
+Status              : Running
+DependentServices   : {AarSvc_9c96024, AarSvc}
+ServicesDependedOn  : {AudioEndpointBuilder, RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : WlanSvc
+DisplayName         : Configuración automática de WLAN
+Status              : Running
+DependentServices   : {xTendUtilityService, xTendSoftAPService}
+ServicesDependedOn  : {wcmsvc, RpcSs, nativewifip, Ndisuio}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : BFE
+DisplayName         : Motor de filtrado de base
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : Winmgmt
+DisplayName         : Instrumental de administración de Windows
+Status              : Running
+DependentServices   : {NcaSvc, iphlpsvc, IAStorDataMgrSvc}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : True
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : CoreMessagingRegistrar
+DisplayName         : CoreMessaging
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : WinHttpAutoProxySvc
+DisplayName         : Servicio de detección automática de proxy web WinHTTP
+Status              : Running
+DependentServices   : {NcaSvc, iphlpsvc}
+ServicesDependedOn  : {Dhcp}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : BrokerInfrastructure
+DisplayName         : Servicio de infraestructura de tareas en segundo plano
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {DcomLaunch, RpcSs, RpcEptMapper}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : BthAvctpSvc
+DisplayName         : Servicio AVCTP
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WebClient
+DisplayName         : Cliente web
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {MRxDAV}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DiagTrack
+DisplayName         : Experiencias del usuario y telemetría asociadas
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : camsvc
+DisplayName         : Servicio Administrador de funcionalidad de acceso
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : WdiServiceHost
+DisplayName         : Host del servicio de diagnóstico
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Wcmsvc
+DisplayName         : Administrador de conexiones de Windows
+Status              : Running
+DependentServices   : {xTendUtilityService, xTendSoftAPService, WlanSvc, icssvc}
+ServicesDependedOn  : {RpcSs, NSI}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : WbioSrvc
+DisplayName         : Servicio biométrico de Windows
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : cbdhsvc_9c96024
+DisplayName         : Servicio de usuario del portapapeles_9c96024
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : 240
+
+Name                : CDPSvc
+DisplayName         : Servicio de plataforma de dispositivos conectados
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {Tcpip, ncbservice, RpcSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : CDPUserSvc_9c96024
+DisplayName         : Servicio de usuario de plataforma de dispositivos conectados_9c96024
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : 240
+
+Name                : CertPropSvc
+DisplayName         : Propagación de certificados
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : ClickToRunSvc
+DisplayName         : Servicio Hacer clic y ejecutar de Microsoft Office
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : WinDefend
+DisplayName         : Servicio de Antivirus de Windows Defender
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : TabletInputService
+DisplayName         : Servicio de Panel de escritura a mano y teclado táctil
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : LSM
+DisplayName         : Administrador de sesión local
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {DcomLaunch, RpcSs, RpcEptMapper}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SysMain
+DisplayName         : SysMain
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss, fileinfo}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : nsi
+DisplayName         : Servicio Interfaz de almacenamiento en red
+Status              : Running
+DependentServices   : {xTendUtilityService, xTendSoftAPService, WlanSvc, icssvc...}
+ServicesDependedOn  : {rpcss, nsiproxy}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : NvContainerLocalSystem
+DisplayName         : NVIDIA LocalSystem Container
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : igfxCUIService2.0.0.0
+DisplayName         : Intel(R) HD Graphics Control Panel Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {SENS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : NVDisplay.ContainerLocalSystem
+DisplayName         : NVIDIA Display Container LS
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : OneSyncSvc_9c96024
+DisplayName         : Sincronizar host_9c96024
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : 224
+
+Name                : ibtsiva
+DisplayName         : Intel Bluetooth Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : NlaSvc
+DisplayName         : Reconoc. ubicación de red
+Status              : Running
+DependentServices   : {NcdAutoSetup, netprofm}
+ServicesDependedOn  : {NSI, RpcSs, Eventlog, Dhcp...}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : xTendUtilityService
+DisplayName         : xTendUtilityService
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {Netman, NetSetupSvc, WlanSvc}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : IAStorDataMgrSvc
+DisplayName         : Intel(R) Rapid Storage Technology
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {winmgmt}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : PlugPlay
+DisplayName         : Plug and Play
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : postgresql-x64-11
+DisplayName         : postgresql-x64-11 - PostgreSQL Server 11
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : True
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : Power
+DisplayName         : Energía
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : ProfSvc
+DisplayName         : Servicio de perfil de usuario
+Status              : Running
+DependentServices   : {XblGameSave, TokenBroker, UserManager, shpamsvc...}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : FontCache3.0.0.0
+DisplayName         : Windows Presentation Foundation Font Cache 3.0.0.0
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : PcaSvc
+DisplayName         : Servicio Asistente para la compatibilidad de programas
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : IKEEXT
+DisplayName         : Módulos de creación de claves de IPsec para IKE y AuthIP
+Status              : Running
+DependentServices   : {XboxNetApiSvc}
+ServicesDependedOn  : {nsi, BFE}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : InstallService
+DisplayName         : Servicio de instalación de Microsoft Store
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : netprofm
+DisplayName         : Servicio de lista de redes
+Status              : Running
+DependentServices   : {NcdAutoSetup}
+ServicesDependedOn  : {RpcSs, nlasvc}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : lmhosts
+DisplayName         : Aplicación auxiliar de NetBIOS sobre TCP/IP
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {Afd}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : LxssManagerUser_9c96024
+DisplayName         : LxssManagerUser_9c96024
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : 240
+
+Name                : LicenseManager
+DisplayName         : Servicio de administrador de licencias de Windows
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : lfsvc
+DisplayName         : Servicio de geolocalización
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Micro Star SCM
+DisplayName         : Micro Star SCM
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : mpssvc
+DisplayName         : Firewall de Windows Defender
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {mpsdrv, bfe}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : LanmanWorkstation
+DisplayName         : Estación de trabajo
+Status              : Running
+DependentServices   : {SessionEnv, Netlogon}
+ServicesDependedOn  : {NSI, MRxSmb20, Bowser}
+CanPauseAndContinue : True
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : LanmanServer
+DisplayName         : Servidor
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {SamSS, Srv2}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Killer Network Service
+DisplayName         : Killer Network Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {KfeCoSvc, EventLog, nsi}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : NahimicService
+DisplayName         : Nahimic service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : KeyIso
+DisplayName         : Aislamiento de claves CNG
+Status              : Running
+DependentServices   : {XboxNetApiSvc, dot3svc, Eaphost}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : jhi_service
+DisplayName         : Intel(R) Dynamic Application Loader Host Interface Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : NcbService
+DisplayName         : Agente de conexión de red
+Status              : Running
+DependentServices   : {CDPSvc}
+ServicesDependedOn  : {RpcSS, tcpip}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : iphlpsvc
+DisplayName         : Aplicación auxiliar IP
+Status              : Running
+DependentServices   : {NcaSvc}
+ServicesDependedOn  : {WinHttpAutoProxySvc, winmgmt, nsi, RpcSS...}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Netman
+DisplayName         : Conexiones de red
+Status              : Running
+DependentServices   : {xTendUtilityService, xTendSoftAPService}
+ServicesDependedOn  : {RpcSs, nsi}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : QWAVE
+DisplayName         : Experiencia de calidad de audio y vídeo de Windows (qWave)
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {QWAVEdrv, rpcss, LLTDIO, psched}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SystemEventsBroker
+DisplayName         : Agente de eventos del sistema
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {RpcSs, RpcEptMapper}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : FontCache
+DisplayName         : Servicio de caché de fuentes de Windows
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : RegSrvc
+DisplayName         : Intel(R) PROSet/Wireless Registry Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : ShellHWDetection
+DisplayName         : Detección de hardware shell
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DPS
+DisplayName         : Servicio de directivas de diagnóstico
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DoSvc
+DisplayName         : Optimización de distribución
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Dnscache
+DisplayName         : Cliente DNS
+Status              : Running
+DependentServices   : {RemoteAccess, RasMan, NcaSvc}
+ServicesDependedOn  : {nsi}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Spooler
+DisplayName         : Cola de impresión
+Status              : Running
+DependentServices   : {Fax}
+ServicesDependedOn  : {RPCSS, http}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, InteractiveProcess
+
+Name                : LMS
+DisplayName         : Intel(R) Management and Security Application Local Management Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : DsSvc
+DisplayName         : Servicio de uso compartido de datos
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SSDPSRV
+DisplayName         : Detección SSDP
+Status              : Running
+DependentServices   : {upnphost}
+ServicesDependedOn  : {HTTP, NSI}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : StateRepository
+DisplayName         : Servicio de repositorio de estado
+Status              : Running
+DependentServices   : {AppXSvc}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : stisvc
+DisplayName         : Adquisición de imágenes de Windows (WIA)
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : True
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : StorSvc
+DisplayName         : Servicio de almacenamiento
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DisplayEnhancementService
+DisplayName         : Servicio de mejora de visualización
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : DispBrokerDesktopSvc
+DisplayName         : Mostrar el servicio de directivas
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SynTPEnhService
+DisplayName         : SynTPEnhService
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32ShareProcess, InteractiveProcess
+
+Name                : SstpSvc
+DisplayName         : Servicio de protocolo de túnel de sockets seguros
+Status              : Running
+DependentServices   : {RemoteAccess, RasMan}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SharedAccess
+DisplayName         : Conexión compartida a Internet (ICS)
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {BFE}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SgrmBroker
+DisplayName         : Agente de supervisión en tiempo de ejecución de Protección del sistema
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : DusmSvc
+DisplayName         : Uso de datos
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : FDResPub
+DisplayName         : Publicación de recurso de detección de función
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {http, fdphost, RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : fdPHost
+DisplayName         : Host de proveedor de detección de función
+Status              : Running
+DependentServices   : {FDResPub}
+ServicesDependedOn  : {RpcSs, http}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : RmSvc
+DisplayName         : Servicio de administración de radio
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : RpcEptMapper
+DisplayName         : Asignador de extremos de RPC
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RpcSs
+DisplayName         : Llamada a procedimiento remoto (RPC)
+Status              : Running
+DependentServices   :
+ServicesDependedOn  : {DcomLaunch, RpcEptMapper}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RtkAudioUniversalService
+DisplayName         : Realtek Audio Universal Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : SamSs
+DisplayName         : Administrador de cuentas de seguridad
+Status              : Running
+DependentServices   : {MSDTC, LanmanServer, KtmRm}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : EvtEng
+DisplayName         : Intel(R) PROSet/Wireless Event Log
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : EventSystem
+DisplayName         : Sistema de eventos COM+
+Status              : Running
+DependentServices   : {igfxCUIService2.0.0.0, COMSysApp, SENS}
+ServicesDependedOn  : {rpcss}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : Schedule
+DisplayName         : Programador de tareas
+Status              : Running
+DependentServices   : {NaturalAuthentication}
+ServicesDependedOn  : {RPCSS, SystemEventsBroker}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : EventLog
+DisplayName         : Registro de eventos de Windows
+Status              : Running
+DependentServices   : {Wecsvc, NcdAutoSetup, netprofm, NlaSvc...}
+ServicesDependedOn  : {}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : SecurityHealthService
+DisplayName         : Servicio Seguridad de Windows
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32OwnProcess
+
+Name                : SEMgrSvc
+DisplayName         : Administrador de pagos y NFC/SE
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RpcSs}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+Name                : SENS
+DisplayName         : Servicio de notificación de eventos de sistema
+Status              : Running
+DependentServices   : {igfxCUIService2.0.0.0, COMSysApp}
+ServicesDependedOn  : {EventSystem}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess, Win32ShareProcess
+
+Name                : EFS
+DisplayName         : Sistema de cifrado de archivos (EFS)
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : False
+ServiceType         : Win32ShareProcess
+
+Name                : RasMan
+DisplayName         : Administrador de conexiones de acceso remoto
+Status              : Running
+DependentServices   : {RemoteAccess}
+ServicesDependedOn  : {SstpSvc, DnsCache}
+CanPauseAndContinue : False
+CanShutdown         : True
+CanStop             : True
+ServiceType         : Win32ShareProcess
+
+Name                : ZeroConfigService
+DisplayName         : Intel(R) PROSet/Wireless Zero Configuration Service
+Status              : Running
+DependentServices   : {}
+ServicesDependedOn  : {RPCSS}
+CanPauseAndContinue : False
+CanShutdown         : False
+CanStop             : True
+ServiceType         : Win32OwnProcess
+
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO>  ls -Path C:\Windows |where -filter {$_.Name -like "*.exe"} | fl -Property name, @{n='tamaño';e={$_.length}}, versionInfo
+
+
+Name        : bfsvc.exe
+tamaño      : 73216
+VersionInfo : File:             C:\Windows\bfsvc.exe
+              InternalName:     bfsvc.exe
+              OriginalFilename: bfsvc.exe.mui
+              FileVersion:      10.0.18362.656 (WinBuild.160101.0800)
+              FileDescription:  Utilidad de servicio de actualización del archivo de arranque
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.18362.656
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : explorer.exe
+tamaño      : 4615376
+VersionInfo : File:             C:\Windows\explorer.exe
+              InternalName:     explorer
+              OriginalFilename: EXPLORER.EXE.MUI
+              FileVersion:      10.0.18362.656 (WinBuild.160101.0800)
+              FileDescription:  Explorador de Windows
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.18362.656
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : HelpPane.exe
+tamaño      : 1059840
+VersionInfo : File:             C:\Windows\HelpPane.exe
+              InternalName:     HelpPane.exe
+              OriginalFilename: HelpPane.exe.mui
+              FileVersion:      10.0.18362.656 (WinBuild.160101.0800)
+              FileDescription:  Ayuda y soporte técnico de Microsoft
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.18362.656
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : hh.exe
+tamaño      : 18432
+VersionInfo : File:             C:\Windows\hh.exe
+              InternalName:     HH 1.41
+              OriginalFilename: HH.exe.mui
+              FileVersion:      10.0.18362.656 (WinBuild.160101.0800)
+              FileDescription:  Archivo ejecutable de ayuda HTML de Microsoft®
+              Product:          Ayuda de HTML
+              ProductVersion:   10.0.18362.656
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : notepad.exe
+tamaño      : 181248
+VersionInfo : File:             C:\Windows\notepad.exe
+              InternalName:     Notepad
+              OriginalFilename: NOTEPAD.EXE.MUI
+              FileVersion:      10.0.18362.1 (WinBuild.160101.0800)
+              FileDescription:  Bloc de notas
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.18362.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : regedit.exe
+tamaño      : 358400
+VersionInfo : File:             C:\Windows\regedit.exe
+              InternalName:     REGEDIT
+              OriginalFilename: REGEDIT.EXE.MUI
+              FileVersion:      10.0.18362.656 (WinBuild.160101.0800)
+              FileDescription:  Editor del Registro
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.18362.656
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : splwow64.exe
+tamaño      : 132608
+VersionInfo : File:             C:\Windows\splwow64.exe
+              InternalName:     splwow64.exe
+              OriginalFilename: splwow64.exe
+              FileVersion:      10.0.18362.476 (WinBuild.160101.0800)
+              FileDescription:  Print driver host for applications
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   10.0.18362.476
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+
+Name        : winhlp32.exe
+tamaño      : 11776
+VersionInfo : File:             C:\Windows\winhlp32.exe
+              InternalName:     WINHSTB
+              OriginalFilename: WINHLP32.EXE.MUI
+              FileVersion:      10.0.18362.656 (WinBuild.160101.0800)
+              FileDescription:  Código auxiliar de Windows Winhlp32
+              Product:          Sistema operativo Microsoft® Windows®
+              ProductVersion:   10.0.18362.656
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Español (España, internacional)
+
+
+Name        : write.exe
+tamaño      : 11264
+VersionInfo : File:             C:\Windows\write.exe
+              InternalName:     write
+              OriginalFilename: write
+              FileVersion:      10.0.18362.1 (WinBuild.160101.0800)
+              FileDescription:  Windows Write
+              Product:          Microsoft® Windows® Operating System
+              ProductVersion:   10.0.18362.1
+              Debug:            False
+              Patched:          False
+              PreRelease:       False
+              PrivateBuild:     False
+              SpecialBuild:     False
+              Language:         Inglés (Estados Unidos)
+
+
+
+
+PS C:\Users\USUARIO>  Get-NetAdapter | Where -filter {$_.Virtual -eq $false} |fl
+
+
+Name                       : Wi-Fi
+InterfaceDescription       : Intel(R) Wireless-AC 9560 160MHz
+InterfaceIndex             : 19
+MacAddress                 : 18-1D-EA-72-90-07
+MediaType                  : Native 802.11
+PhysicalMediaType          : Native 802.11
+InterfaceOperationalStatus : Up
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 130
+MediaConnectionState       : Connected
+ConnectorPresent           : True
+DriverInformation          : Driver Date 2019-10-06 Version 21.50.1.1 NDIS 6.60
+
+Name                       : Ethernet
+InterfaceDescription       : Killer E2400 Gigabit Ethernet Controller
+InterfaceIndex             : 17
+MacAddress                 : 00-D8-61-06-6C-5D
+MediaType                  : 802.3
+PhysicalMediaType          : 802.3
+InterfaceOperationalStatus : Down
+AdminStatus                : Up
+LinkSpeed(Mbps)            : 0
+MediaConnectionState       : Disconnected
+ConnectorPresent           : True
+VlanID                     : 0
+DriverInformation          : Driver Date 2017-08-31 Version 9.0.0.46 NDIS 6.30
+
+
+
+PS C:\Users\USUARIO>  Get-DnsClientCache | where -filter {$_.Type -eq (28 ) -or $_.Type -eq 1} |fl
+
+
+Entry      : icesi.edu.co
+RecordName : icesi.edu.co
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 18440
+DataLength : 4
+Data       : 200.3.192.46
+
+Entry      : msi.mshome.net
+RecordName :
+RecordType : AAAA
+Status     : NoRecords
+Section    :
+TimeToLive :
+DataLength :
+Data       :
+
+Entry      : msi.mshome.net
+RecordName : MSI.mshome.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 188090
+DataLength : 4
+Data       : 192.168.137.1
+
+Entry      : laptop-78991cv9.mshome.net
+RecordName :
+RecordType : AAAA
+Status     : NoRecords
+Section    :
+TimeToLive :
+DataLength :
+Data       :
+
+Entry      : laptop-78991cv9.mshome.net
+RecordName : LAPTOP-78991CV9.mshome.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 188090
+DataLength : 4
+Data       : 192.168.137.222
+
+Entry      : d.docs.live.net
+RecordName : l-0003.l-msedge.net
+RecordType : A
+Status     : Success
+Section    : Answer
+TimeToLive : 11
+DataLength : 4
+Data       : 13.107.42.12
+
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO>  ls -Path C:\Windows\System32 | where -filter {$_.Name -like "*exe"} | WHERE -filter {$_.length/1MB -gt 5} |fl
+
+
+    Directorio: C:\Windows\System32
+
+
+
+Name           : MRT.exe
+Length         : 120407888
+CreationTime   : 6/10/2019 9:47:38 a. m.
+LastWriteTime  : 14/02/2020 9:46:54 a. m.
+LastAccessTime : 14/02/2020 9:46:54 a. m.
+Mode           : -a----
+LinkType       :
+Target         : {}
+VersionInfo    : File:             C:\Windows\System32\MRT.exe
+                 InternalName:     mrt.exe
+                 OriginalFilename: mrt.exe
+                 FileVersion:      5.80.16723.5
+                 FileDescription:  Herramienta de eliminación de software malintencionado de Microsoft Windows
+                 Product:          Herramienta de eliminación de software malintencionado de Microsoft Windows
+                 ProductVersion:   5.80.16723.5
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Español (España, internacional)
+
+
+Name           : ntoskrnl.exe
+Length         : 9929016
+CreationTime   : 14/02/2020 9:41:48 a. m.
+LastWriteTime  : 14/02/2020 9:41:48 a. m.
+LastAccessTime : 14/02/2020 9:41:48 a. m.
+Mode           : -a----
+LinkType       : HardLink
+Target         : {C:\Windows\WinSxS\amd64_microsoft-windows-os-kernel_31bf3856ad364e35_10.0.18362.657_none_c1ff990845c32381\ntoskrnl.
+                 exe}
+VersionInfo    : File:             C:\Windows\System32\ntoskrnl.exe
+                 InternalName:     ntkrnlmp.exe
+                 OriginalFilename: ntkrnlmp.exe
+                 FileVersion:      10.0.18362.657 (WinBuild.160101.0800)
+                 FileDescription:  NT Kernel & System
+                 Product:          Microsoft® Windows® Operating System
+                 ProductVersion:   10.0.18362.657
+                 Debug:            False
+                 Patched:          False
+                 PreRelease:       False
+                 PrivateBuild:     False
+                 SpecialBuild:     False
+                 Language:         Inglés (Estados Unidos)
+
+
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO> Get-HotFix | where -filter {$_.description -like "*security*"} |fl
+
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4515383
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 6/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4516115
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4521863
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 9/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4524569
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 15/11/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4528759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 17/01/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4537759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4538674
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO> Get-HotFix | where -filter {$_.description -like "*security*"} |fl
+
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4515383
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 6/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4516115
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4521863
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 9/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4524569
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 15/11/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4528759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 17/01/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4537759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4538674
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO> Get-HotFix | where -filter {$_.installedBy -like "*SYSTEM*"} |fl
+
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4534132
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4515383
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 6/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4516115
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4517245
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 28/12/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4521863
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 9/10/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4524569
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 15/11/2019 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4528759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 17/01/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4537759
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Security Update
+FixComments         :
+HotFixID            : KB4538674
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+Description         : Update
+FixComments         :
+HotFixID            : KB4532693
+InstallDate         :
+InstalledBy         : NT AUTHORITY\SYSTEM
+InstalledOn         : 14/02/2020 12:00:00 a. m.
+Name                :
+ServicePackInEffect :
+Status              :
+
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO> Get-Process | where -filter {$_.Name -eq "Conhost" -or $_.Name -eq "Svhost"}
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    118       7     6428      10196              3824   0 conhost
+    156      10     6696      11584              6364   0 conhost
+    151      10     6712      11352              7556   0 conhost
+    124       9     6664       1048       0,06  14900  20 conhost
+
+
+PS C:\Users\USUARIO> Get-Process | where -filter {$_.Name -eq "Conhost" -or $_.Name -eq "Svchost"}
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    118       7     6428      10196              3824   0 conhost
+    156      10     6696      11584              6364   0 conhost
+    151      10     6712      11352              7556   0 conhost
+    124       9     6664       1048       0,06  14900  20 conhost
+     86       5      980       3404               540   0 svchost
+   1345      25    22600      39160               736   0 svchost
+    161       9     2720       9720               944   0 svchost
+    255      15     3024      12144       0,11   1072  20 svchost
+   1394      20    11552      18776              1156   0 svchost
+    436      11     4296       9564              1208   0 svchost
+    429      20     4600      17968              1432   0 svchost
+    257      13     2820      10000              1440   0 svchost
+    236      13     3092      10308              1452   0 svchost
+    427      18     9436      17236              1484   0 svchost
+    165       7     2948       6432              1516   0 svchost
+    271      10     2856       8680              1544   0 svchost
+    176       9     2148       7312              1580   0 svchost
+    127       8     1736       6568              1656   0 svchost
+    228      13     2732      10892              1664   0 svchost
+    450      15    14964      17676              1712   0 svchost
+    226      14     2304       8664              1804   0 svchost
+    965      11     3340      10272              1884   0 svchost
+    166      28     7400      10404              1944   0 svchost
+    225      10     2612       7132              2012   0 svchost
+    399      16     5188      12180              2068   0 svchost
+    277      13     3568       8032              2188   0 svchost
+   2186      25     4300       9600              2332   0 svchost
+    229      12     2796      11004              2372   0 svchost
+    215       7     1344       4792              2380   0 svchost
+    225      12     2448       9448              2388   0 svchost
+    219      11     2600       8216              2440   0 svchost
+    192      10     1940       6756              2468   0 svchost
+    164      10     1940       7056              2480   0 svchost
+    141      12     1988       5940              2592   0 svchost
+    737      16    13008      23688              2676   0 svchost
+    541      24     9252      36304       2,20   2876  20 svchost
+    479      14     4688      14600              2908   0 svchost
+    377      16     2924       8776              2964   0 svchost
+    402      10    10560      18536              3040   0 svchost
+    182       9     2188       6660              3200   0 svchost
+    561      24     7668      19972              3272   0 svchost
+    185      11     2084       6852              3356   0 svchost
+    284       9     1868       6536              3368   0 svchost
+    273      17     5792      14244              3532   0 svchost
+    373      16     6472      19684              3648   0 svchost
+    123       9     1748       7080       0,02   3692  20 svchost
+    478      34    15328      24852              3996   0 svchost
+    446      21     6220      20260              4268   0 svchost
+    550      23    23328      41044              4572   0 svchost
+    262      11     2400       8988              4580   0 svchost
+    159       8     1944       6588              4612   0 svchost
+    271      14     2916       7024              4628   0 svchost
+    405      23    26080      32284              4640   0 svchost
+    510      21     4988      12596              4656   0 svchost
+    187      10     2236       7144              4664   0 svchost
+    137       7     1420       4832              4688   0 svchost
+    407      28     6164      15860              4696   0 svchost
+    135       9     1632       5484              4704   0 svchost
+    426      20     5612      21748              4712   0 svchost
+    159       9     2060       7168              4768   0 svchost
+    227      12     2692       8716              4816   0 svchost
+    343      17     5492      16448              4844   0 svchost
+    136       8     1664       5324              5404   0 svchost
+    207      12     2368       7848              5664   0 svchost
+    388      24     3520      11172              5848   0 svchost
+    386      17     5436      15756              6596   0 svchost
+    231      15     2304       6828              6604   0 svchost
+    273      16     2988       9808              7656   0 svchost
+    369      17     4488      24616       1,20   8440  20 svchost
+    491      18     6072      25348              8704   0 svchost
+    497      20     8404      26256              9072   0 svchost
+    143       8     3592       8976              9140   0 svchost
+    217       9     2188       8716              9268   0 svchost
+    339      10     2172       8232              9872   0 svchost
+    304      11     5524      11164             10072   0 svchost
+    262      13     3028      10900             10192   0 svchost
+    842      77    43196      41832             11520   0 svchost
+    118       7     1380       5528             11716   0 svchost
+    169       9     1752       7212             12304   0 svchost
+    144       9     1780       7088             14300   0 svchost
+    251      16     8248      12324             14960   0 svchost
+    178      59     2292       7264             15112   0 svchost
+    476      17     3244      13092             16536   0 svchost
+    156      10     2236       9832             17352   0 svchost
+    174       9     2056       7704             18312   0 svchost
+    463      18     9788      25676       7,81  19440  20 svchost
+
+
+PS C:\Users\USUARIO> Get-Process | where -filter {$_.Name -eq "Conhost" -or $_.Name -eq "Svchost"} | fl
+
+
+Id      : 3824
+Handles : 118
+CPU     :
+SI      : 0
+Name    : conhost
+
+Id      : 6364
+Handles : 156
+CPU     :
+SI      : 0
+Name    : conhost
+
+Id      : 7556
+Handles : 151
+CPU     :
+SI      : 0
+Name    : conhost
+
+Id      : 14900
+Handles : 124
+CPU     : 0,0625
+SI      : 20
+Name    : conhost
+
+Id      : 540
+Handles : 86
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 736
+Handles : 1345
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 944
+Handles : 161
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1072
+Handles : 255
+CPU     : 0,109375
+SI      : 20
+Name    : svchost
+
+Id      : 1156
+Handles : 1383
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1208
+Handles : 436
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1432
+Handles : 429
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1440
+Handles : 257
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1452
+Handles : 236
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1484
+Handles : 427
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1516
+Handles : 165
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1544
+Handles : 271
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1580
+Handles : 176
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1656
+Handles : 127
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1664
+Handles : 228
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1712
+Handles : 450
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1804
+Handles : 226
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1884
+Handles : 965
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 1944
+Handles : 166
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2012
+Handles : 225
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2068
+Handles : 399
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2188
+Handles : 277
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2332
+Handles : 2186
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2372
+Handles : 229
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2380
+Handles : 215
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2388
+Handles : 225
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2440
+Handles : 219
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2468
+Handles : 192
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2480
+Handles : 164
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2592
+Handles : 141
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2676
+Handles : 727
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2876
+Handles : 541
+CPU     : 2,203125
+SI      : 20
+Name    : svchost
+
+Id      : 2908
+Handles : 479
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 2964
+Handles : 377
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3040
+Handles : 402
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3200
+Handles : 182
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3272
+Handles : 561
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3356
+Handles : 185
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3368
+Handles : 284
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3532
+Handles : 273
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3648
+Handles : 373
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 3692
+Handles : 123
+CPU     : 0,015625
+SI      : 20
+Name    : svchost
+
+Id      : 3996
+Handles : 478
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4268
+Handles : 446
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4572
+Handles : 550
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4580
+Handles : 262
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4612
+Handles : 159
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4628
+Handles : 271
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4640
+Handles : 405
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4656
+Handles : 510
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4664
+Handles : 187
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4688
+Handles : 137
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4696
+Handles : 407
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4704
+Handles : 135
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4712
+Handles : 426
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4768
+Handles : 159
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4816
+Handles : 227
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 4844
+Handles : 343
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 5404
+Handles : 136
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 5664
+Handles : 207
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 5848
+Handles : 388
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 6596
+Handles : 386
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 6604
+Handles : 231
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 7656
+Handles : 273
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 8440
+Handles : 369
+CPU     : 1,203125
+SI      : 20
+Name    : svchost
+
+Id      : 8704
+Handles : 491
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 9072
+Handles : 497
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 9140
+Handles : 143
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 9268
+Handles : 217
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 9872
+Handles : 339
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 10072
+Handles : 304
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 10192
+Handles : 262
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 11520
+Handles : 842
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 11716
+Handles : 118
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 12304
+Handles : 169
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 14300
+Handles : 144
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 14960
+Handles : 251
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 15112
+Handles : 178
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 16536
+Handles : 476
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 17352
+Handles : 156
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 18312
+Handles : 174
+CPU     :
+SI      : 0
+Name    : svchost
+
+Id      : 19440
+Handles : 463
+CPU     : 8
+SI      : 20
+Name    : svchost
+
+
+
+PS C:\Users\USUARIO> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200311131351
+**********************

@@ -1,0 +1,1488 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20200311084021
+Nombre de usuario: MSI\StevenMa
+Usuario RunAs: MSI\StevenMa
+Nombre de la configuración: 
+Máquina: MSI (Microsoft Windows NT 10.0.18363.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell_ISE.exe
+Id. de proceso: 14208
+PSVersion: 5.1.18362.628
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.18362.628
+BuildVersion: 10.0.18362.628
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\USUARIO\Documents\PowerShell_transcript.MSI.oNe8RMdB.20200311084021.txt
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, version-info, @{n='tamaño';e={$_.length}}
+
+Name                     version-info  tamaño
+----                     ------------  ------
+A-Volute                                    1
+addins                                      1
+appcompat                                   1
+apppatch                                    1
+AppReadiness                                1
+assembly                                    1
+bcastdvr                                    1
+Boot                                        1
+Branding                                    1
+CbsTemp                                     1
+Containers                                  1
+Cursors                                     1
+debug                                       1
+diagnostics                                 1
+DiagTrack                                   1
+DigitalLocker                               1
+Downloaded Program Files                    1
+en-US                                       1
+es-ES                                       1
+Fonts                                       1
+GameBarPresenceWriter                       1
+Globalization                               1
+Help                                        1
+IdentityCRL                                 1
+IME                                         1
+ImmersiveControlPanel                       1
+INF                                         1
+InfusedApps                                 1
+InputMethod                                 1
+L2Schemas                                   1
+LiveKernelReports                           1
+Logs                                        1
+Media                                       1
+Microsoft.NET                               1
+Migration                                   1
+ModemLogs                                   1
+OCR                                         1
+Offline Web Pages                           1
+Panther                                     1
+Performance                                 1
+PLA                                         1
+PolicyDefinitions                           1
+Prefetch                                    1
+PrintDialog                                 1
+Provisioning                                1
+Registration                                1
+rescache                                    1
+Resources                                   1
+RE_DRIVE                                    1
+SchCache                                    1
+schemas                                     1
+security                                    1
+ServiceProfiles                             1
+ServiceState                                1
+servicing                                   1
+Setup                                       1
+ShellComponents                             1
+ShellExperiences                            1
+SKB                                         1
+SoftwareDistribution                        1
+Speech                                      1
+Speech_OneCore                              1
+System                                      1
+System32                                    1
+SystemApps                                  1
+SystemResources                             1
+SysWOW64                                    1
+TAPI                                        1
+Tasks                                       1
+Temp                                        1
+TextInput                                   1
+tracing                                     1
+twain_32                                    1
+UpdateAssistant                             1
+Vss                                         1
+WaaS                                        1
+Web                                         1
+WinSxS                                      1
+bfsvc.exe                               73216
+bootstat.dat                            67584
+comsetup.log                              753
+Core.xml                                33951
+CSUP.txt                                   10
+diagerr.xml                              7623
+diagwrn.xml                              7623
+DirectX.log                               200
+DPINST.LOG                              95522
+DtcInstall.log                            776
+explorer.exe                          4615376
+HelpPane.exe                          1059840
+hh.exe                                  18432
+mib.bin                                 43131
+notepad.exe                            181248
+NvContainerRecovery.bat                  1951
+PFRO.log                              1282944
+regedit.exe                            358400
+RtlExUpd.dll                          2856800
+setupact.log                             6324
+setuperr.log                                0
+SMSS-PFRO1f6e.tmp                       99920
+splwow64.exe                           132608
+system.ini                                219
+twain_32.dll                            64512
+win.ini                                    92
+WindowsUpdate.log                         276
+winhlp32.exe                            11776
+WMSysPr9.prx                           316640
+write.exe                               11264
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows\*.exe | gm
+
+
+   TypeName: System.IO.FileInfo
+
+Name                      MemberType     Definition
+----                      ----------     ----------
+LinkType                  CodeProperty   System.String LinkType{get=GetLinkType;}
+Mode                      CodeProperty   System.String Mode{get=Mode;}
+Target                    CodeProperty   System.Collections.Generic.IEnumerable`1[[System.String, mscorlib, Version=4.0.0.0, Cultu...
+AppendText                Method         System.IO.StreamWriter AppendText()
+CopyTo                    Method         System.IO.FileInfo CopyTo(string destFileName), System.IO.FileInfo CopyTo(string destFile...
+Create                    Method         System.IO.FileStream Create()
+CreateObjRef              Method         System.Runtime.Remoting.ObjRef CreateObjRef(type requestedType)
+CreateText                Method         System.IO.StreamWriter CreateText()
+Decrypt                   Method         void Decrypt()
+Delete                    Method         void Delete()
+Encrypt                   Method         void Encrypt()
+Equals                    Method         bool Equals(System.Object obj)
+GetAccessControl          Method         System.Security.AccessControl.FileSecurity GetAccessControl(), System.Security.AccessCont...
+GetHashCode               Method         int GetHashCode()
+GetLifetimeService        Method         System.Object GetLifetimeService()
+GetObjectData             Method         void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Se...
+GetType                   Method         type GetType()
+InitializeLifetimeService Method         System.Object InitializeLifetimeService()
+MoveTo                    Method         void MoveTo(string destFileName)
+Open                      Method         System.IO.FileStream Open(System.IO.FileMode mode), System.IO.FileStream Open(System.IO.F...
+OpenRead                  Method         System.IO.FileStream OpenRead()
+OpenText                  Method         System.IO.StreamReader OpenText()
+OpenWrite                 Method         System.IO.FileStream OpenWrite()
+Refresh                   Method         void Refresh()
+Replace                   Method         System.IO.FileInfo Replace(string destinationFileName, string destinationBackupFileName),...
+SetAccessControl          Method         void SetAccessControl(System.Security.AccessControl.FileSecurity fileSecurity)
+ToString                  Method         string ToString()
+PSChildName               NoteProperty   string PSChildName=bfsvc.exe
+PSDrive                   NoteProperty   PSDriveInfo PSDrive=C
+PSIsContainer             NoteProperty   bool PSIsContainer=False
+PSParentPath              NoteProperty   string PSParentPath=Microsoft.PowerShell.Core\FileSystem::C:\Windows
+PSPath                    NoteProperty   string PSPath=Microsoft.PowerShell.Core\FileSystem::C:\Windows\bfsvc.exe
+PSProvider                NoteProperty   ProviderInfo PSProvider=Microsoft.PowerShell.Core\FileSystem
+Attributes                Property       System.IO.FileAttributes Attributes {get;set;}
+CreationTime              Property       datetime CreationTime {get;set;}
+CreationTimeUtc           Property       datetime CreationTimeUtc {get;set;}
+Directory                 Property       System.IO.DirectoryInfo Directory {get;}
+DirectoryName             Property       string DirectoryName {get;}
+Exists                    Property       bool Exists {get;}
+Extension                 Property       string Extension {get;}
+FullName                  Property       string FullName {get;}
+IsReadOnly                Property       bool IsReadOnly {get;set;}
+LastAccessTime            Property       datetime LastAccessTime {get;set;}
+LastAccessTimeUtc         Property       datetime LastAccessTimeUtc {get;set;}
+LastWriteTime             Property       datetime LastWriteTime {get;set;}
+LastWriteTimeUtc          Property       datetime LastWriteTimeUtc {get;set;}
+Length                    Property       long Length {get;}
+Name                      Property       string Name {get;}
+BaseName                  ScriptProperty System.Object BaseName {get=if ($this.Extension.Length -gt 0){$this.Name.Remove($this.Nam...
+VersionInfo               ScriptProperty System.Object VersionInfo {get=[System.Diagnostics.FileVersionInfo]::GetVersionInfo($this...
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, versionInfo, @{n='tamaño';e={$_.length}}
+
+Name                     versionInfo
+----                     -----------
+A-Volute
+addins
+appcompat
+apppatch
+AppReadiness
+assembly
+bcastdvr
+Boot
+Branding
+CbsTemp
+Containers
+Cursors
+debug
+diagnostics
+DiagTrack
+DigitalLocker
+Downloaded Program Files
+en-US
+es-ES
+Fonts
+GameBarPresenceWriter
+Globalization
+Help
+IdentityCRL
+IME
+ImmersiveControlPanel
+INF
+InfusedApps
+InputMethod
+L2Schemas
+LiveKernelReports
+Logs
+Media
+Microsoft.NET
+Migration
+ModemLogs
+OCR
+Offline Web Pages
+Panther
+Performance
+PLA
+PolicyDefinitions
+Prefetch
+PrintDialog
+Provisioning
+Registration
+rescache
+Resources
+RE_DRIVE
+SchCache
+schemas
+security
+ServiceProfiles
+ServiceState
+servicing
+Setup
+ShellComponents
+ShellExperiences
+SKB
+SoftwareDistribution
+Speech
+Speech_OneCore
+System
+System32
+SystemApps
+SystemResources
+SysWOW64
+TAPI
+Tasks
+Temp
+TextInput
+tracing
+twain_32
+UpdateAssistant
+Vss
+WaaS
+Web
+WinSxS
+bfsvc.exe                File:             C:\Windows\bfsvc.exe...
+bootstat.dat             File:             C:\Windows\bootstat.dat...
+comsetup.log             File:             C:\Windows\comsetup.log...
+Core.xml                 File:             C:\Windows\Core.xml...
+CSUP.txt                 File:             C:\Windows\CSUP.txt...
+diagerr.xml              File:             C:\Windows\diagerr.xml...
+diagwrn.xml              File:             C:\Windows\diagwrn.xml...
+DirectX.log              File:             C:\Windows\DirectX.log...
+DPINST.LOG               File:             C:\Windows\DPINST.LOG...
+DtcInstall.log           File:             C:\Windows\DtcInstall.log...
+explorer.exe             File:             C:\Windows\explorer.exe...
+HelpPane.exe             File:             C:\Windows\HelpPane.exe...
+hh.exe                   File:             C:\Windows\hh.exe...
+mib.bin                  File:             C:\Windows\mib.bin...
+notepad.exe              File:             C:\Windows\notepad.exe...
+NvContainerRecovery.bat  File:             C:\Windows\NvContainerRecovery.bat...
+PFRO.log                 File:             C:\Windows\PFRO.log...
+regedit.exe              File:             C:\Windows\regedit.exe...
+RtlExUpd.dll             File:             C:\Windows\RtlExUpd.dll...
+setupact.log             File:             C:\Windows\setupact.log...
+setuperr.log             File:             C:\Windows\setuperr.log...
+SMSS-PFRO1f6e.tmp        File:             C:\Windows\SMSS-PFRO1f6e.tmp...
+splwow64.exe             File:             C:\Windows\splwow64.exe...
+system.ini               File:             C:\Windows\system.ini...
+twain_32.dll             File:             C:\Windows\twain_32.dll...
+win.ini                  File:             C:\Windows\win.ini...
+WindowsUpdate.log        File:             C:\Windows\WindowsUpdate.log...
+winhlp32.exe             File:             C:\Windows\winhlp32.exe...
+WMSysPr9.prx             File:             C:\Windows\WMSysPr9.prx...
+write.exe                File:             C:\Windows\write.exe...
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, VersionInfo, @{n='tamaño';e={$_.length}}
+
+Name                     VersionInfo
+----                     -----------
+A-Volute
+addins
+appcompat
+apppatch
+AppReadiness
+assembly
+bcastdvr
+Boot
+Branding
+CbsTemp
+Containers
+Cursors
+debug
+diagnostics
+DiagTrack
+DigitalLocker
+Downloaded Program Files
+en-US
+es-ES
+Fonts
+GameBarPresenceWriter
+Globalization
+Help
+IdentityCRL
+IME
+ImmersiveControlPanel
+INF
+InfusedApps
+InputMethod
+L2Schemas
+LiveKernelReports
+Logs
+Media
+Microsoft.NET
+Migration
+ModemLogs
+OCR
+Offline Web Pages
+Panther
+Performance
+PLA
+PolicyDefinitions
+Prefetch
+PrintDialog
+Provisioning
+Registration
+rescache
+Resources
+RE_DRIVE
+SchCache
+schemas
+security
+ServiceProfiles
+ServiceState
+servicing
+Setup
+ShellComponents
+ShellExperiences
+SKB
+SoftwareDistribution
+Speech
+Speech_OneCore
+System
+System32
+SystemApps
+SystemResources
+SysWOW64
+TAPI
+Tasks
+Temp
+TextInput
+tracing
+twain_32
+UpdateAssistant
+Vss
+WaaS
+Web
+WinSxS
+bfsvc.exe                File:             C:\Windows\bfsvc.exe...
+bootstat.dat             File:             C:\Windows\bootstat.dat...
+comsetup.log             File:             C:\Windows\comsetup.log...
+Core.xml                 File:             C:\Windows\Core.xml...
+CSUP.txt                 File:             C:\Windows\CSUP.txt...
+diagerr.xml              File:             C:\Windows\diagerr.xml...
+diagwrn.xml              File:             C:\Windows\diagwrn.xml...
+DirectX.log              File:             C:\Windows\DirectX.log...
+DPINST.LOG               File:             C:\Windows\DPINST.LOG...
+DtcInstall.log           File:             C:\Windows\DtcInstall.log...
+explorer.exe             File:             C:\Windows\explorer.exe...
+HelpPane.exe             File:             C:\Windows\HelpPane.exe...
+hh.exe                   File:             C:\Windows\hh.exe...
+mib.bin                  File:             C:\Windows\mib.bin...
+notepad.exe              File:             C:\Windows\notepad.exe...
+NvContainerRecovery.bat  File:             C:\Windows\NvContainerRecovery.bat...
+PFRO.log                 File:             C:\Windows\PFRO.log...
+regedit.exe              File:             C:\Windows\regedit.exe...
+RtlExUpd.dll             File:             C:\Windows\RtlExUpd.dll...
+setupact.log             File:             C:\Windows\setupact.log...
+setuperr.log             File:             C:\Windows\setuperr.log...
+SMSS-PFRO1f6e.tmp        File:             C:\Windows\SMSS-PFRO1f6e.tmp...
+splwow64.exe             File:             C:\Windows\splwow64.exe...
+system.ini               File:             C:\Windows\system.ini...
+twain_32.dll             File:             C:\Windows\twain_32.dll...
+win.ini                  File:             C:\Windows\win.ini...
+WindowsUpdate.log        File:             C:\Windows\WindowsUpdate.log...
+winhlp32.exe             File:             C:\Windows\winhlp32.exe...
+WMSysPr9.prx             File:             C:\Windows\WMSysPr9.prx...
+write.exe                File:             C:\Windows\write.exe...
+
+
+PS C:\Users\USUARIO> clear
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, VersionInfo, @{n='tamaño';e={$_.length}}
+
+Name                     VersionInfo
+----                     -----------
+A-Volute
+addins
+appcompat
+apppatch
+AppReadiness
+assembly
+bcastdvr
+Boot
+Branding
+CbsTemp
+Containers
+Cursors
+debug
+diagnostics
+DiagTrack
+DigitalLocker
+Downloaded Program Files
+en-US
+es-ES
+Fonts
+GameBarPresenceWriter
+Globalization
+Help
+IdentityCRL
+IME
+ImmersiveControlPanel
+INF
+InfusedApps
+InputMethod
+L2Schemas
+LiveKernelReports
+Logs
+Media
+Microsoft.NET
+Migration
+ModemLogs
+OCR
+Offline Web Pages
+Panther
+Performance
+PLA
+PolicyDefinitions
+Prefetch
+PrintDialog
+Provisioning
+Registration
+rescache
+Resources
+RE_DRIVE
+SchCache
+schemas
+security
+ServiceProfiles
+ServiceState
+servicing
+Setup
+ShellComponents
+ShellExperiences
+SKB
+SoftwareDistribution
+Speech
+Speech_OneCore
+System
+System32
+SystemApps
+SystemResources
+SysWOW64
+TAPI
+Tasks
+Temp
+TextInput
+tracing
+twain_32
+UpdateAssistant
+Vss
+WaaS
+Web
+WinSxS
+bfsvc.exe                File:             C:\Windows\bfsvc.exe...
+bootstat.dat             File:             C:\Windows\bootstat.dat...
+comsetup.log             File:             C:\Windows\comsetup.log...
+Core.xml                 File:             C:\Windows\Core.xml...
+CSUP.txt                 File:             C:\Windows\CSUP.txt...
+diagerr.xml              File:             C:\Windows\diagerr.xml...
+diagwrn.xml              File:             C:\Windows\diagwrn.xml...
+DirectX.log              File:             C:\Windows\DirectX.log...
+DPINST.LOG               File:             C:\Windows\DPINST.LOG...
+DtcInstall.log           File:             C:\Windows\DtcInstall.log...
+explorer.exe             File:             C:\Windows\explorer.exe...
+HelpPane.exe             File:             C:\Windows\HelpPane.exe...
+hh.exe                   File:             C:\Windows\hh.exe...
+mib.bin                  File:             C:\Windows\mib.bin...
+notepad.exe              File:             C:\Windows\notepad.exe...
+NvContainerRecovery.bat  File:             C:\Windows\NvContainerRecovery.bat...
+PFRO.log                 File:             C:\Windows\PFRO.log...
+regedit.exe              File:             C:\Windows\regedit.exe...
+RtlExUpd.dll             File:             C:\Windows\RtlExUpd.dll...
+setupact.log             File:             C:\Windows\setupact.log...
+setuperr.log             File:             C:\Windows\setuperr.log...
+SMSS-PFRO1f6e.tmp        File:             C:\Windows\SMSS-PFRO1f6e.tmp...
+splwow64.exe             File:             C:\Windows\splwow64.exe...
+system.ini               File:             C:\Windows\system.ini...
+twain_32.dll             File:             C:\Windows\twain_32.dll...
+win.ini                  File:             C:\Windows\win.ini...
+WindowsUpdate.log        File:             C:\Windows\WindowsUpdate.log...
+winhlp32.exe             File:             C:\Windows\winhlp32.exe...
+WMSysPr9.prx             File:             C:\Windows\WMSysPr9.prx...
+write.exe                File:             C:\Windows\write.exe...
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows\*.exe | Select-Object VersionInfo |gm
+
+
+   TypeName: Selected.System.IO.FileInfo
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+VersionInfo NoteProperty System.Diagnostics.FileVersionInfo VersionInfo=File:             C:\Windows\bfsvc.exe...
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, @{N='VersionInfo'; e={$:.VersionInfo.ToString()}}, @{n='tamaño';e={$_.length}}
+En línea: 1 Carácter: 64
++ ... Path C:\Windows | ft -Property name, @{N='VersionInfo'; e={$:.Version ...
++                                                                ~~
+La referencia de variable no es válida. El carácter '$' no va seguido de un carácter de nombre de variable válido. Considere la
+posibilidad de usar ${} para delimitar el nombre.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : InvalidVariableReference
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, @{N='VersionInfo'; e={$_.VersionInfo.ToString()}}, @{n='tamaño';e={$_.length}}
+
+Name                     VersionInfo
+----                     -----------
+A-Volute
+addins
+appcompat
+apppatch
+AppReadiness
+assembly
+bcastdvr
+Boot
+Branding
+CbsTemp
+Containers
+Cursors
+debug
+diagnostics
+DiagTrack
+DigitalLocker
+Downloaded Program Files
+en-US
+es-ES
+Fonts
+GameBarPresenceWriter
+Globalization
+Help
+IdentityCRL
+IME
+ImmersiveControlPanel
+INF
+InfusedApps
+InputMethod
+L2Schemas
+LiveKernelReports
+Logs
+Media
+Microsoft.NET
+Migration
+ModemLogs
+OCR
+Offline Web Pages
+Panther
+Performance
+PLA
+PolicyDefinitions
+Prefetch
+PrintDialog
+Provisioning
+Registration
+rescache
+Resources
+RE_DRIVE
+SchCache
+schemas
+security
+ServiceProfiles
+ServiceState
+servicing
+Setup
+ShellComponents
+ShellExperiences
+SKB
+SoftwareDistribution
+Speech
+Speech_OneCore
+System
+System32
+SystemApps
+SystemResources
+SysWOW64
+TAPI
+Tasks
+Temp
+TextInput
+tracing
+twain_32
+UpdateAssistant
+Vss
+WaaS
+Web
+WinSxS
+bfsvc.exe                File:             C:\Windows\bfsvc.exe...
+bootstat.dat             File:             C:\Windows\bootstat.dat...
+comsetup.log             File:             C:\Windows\comsetup.log...
+Core.xml                 File:             C:\Windows\Core.xml...
+CSUP.txt                 File:             C:\Windows\CSUP.txt...
+diagerr.xml              File:             C:\Windows\diagerr.xml...
+diagwrn.xml              File:             C:\Windows\diagwrn.xml...
+DirectX.log              File:             C:\Windows\DirectX.log...
+DPINST.LOG               File:             C:\Windows\DPINST.LOG...
+DtcInstall.log           File:             C:\Windows\DtcInstall.log...
+explorer.exe             File:             C:\Windows\explorer.exe...
+HelpPane.exe             File:             C:\Windows\HelpPane.exe...
+hh.exe                   File:             C:\Windows\hh.exe...
+mib.bin                  File:             C:\Windows\mib.bin...
+notepad.exe              File:             C:\Windows\notepad.exe...
+NvContainerRecovery.bat  File:             C:\Windows\NvContainerRecovery.bat...
+PFRO.log                 File:             C:\Windows\PFRO.log...
+regedit.exe              File:             C:\Windows\regedit.exe...
+RtlExUpd.dll             File:             C:\Windows\RtlExUpd.dll...
+setupact.log             File:             C:\Windows\setupact.log...
+setuperr.log             File:             C:\Windows\setuperr.log...
+SMSS-PFRO1f6e.tmp        File:             C:\Windows\SMSS-PFRO1f6e.tmp...
+splwow64.exe             File:             C:\Windows\splwow64.exe...
+system.ini               File:             C:\Windows\system.ini...
+twain_32.dll             File:             C:\Windows\twain_32.dll...
+win.ini                  File:             C:\Windows\win.ini...
+WindowsUpdate.log        File:             C:\Windows\WindowsUpdate.log...
+winhlp32.exe             File:             C:\Windows\winhlp32.exe...
+WMSysPr9.prx             File:             C:\Windows\WMSysPr9.prx...
+write.exe                File:             C:\Windows\write.exe...
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, VersionInfo, @{n='tamaño';e={$_.length}}
+
+Name                     VersionInfo
+----                     -----------
+A-Volute
+addins
+appcompat
+apppatch
+AppReadiness
+assembly
+bcastdvr
+Boot
+Branding
+CbsTemp
+Containers
+Cursors
+debug
+diagnostics
+DiagTrack
+DigitalLocker
+Downloaded Program Files
+en-US
+es-ES
+Fonts
+GameBarPresenceWriter
+Globalization
+Help
+IdentityCRL
+IME
+ImmersiveControlPanel
+INF
+InfusedApps
+InputMethod
+L2Schemas
+LiveKernelReports
+Logs
+Media
+Microsoft.NET
+Migration
+ModemLogs
+OCR
+Offline Web Pages
+Panther
+Performance
+PLA
+PolicyDefinitions
+Prefetch
+PrintDialog
+Provisioning
+Registration
+rescache
+Resources
+RE_DRIVE
+SchCache
+schemas
+security
+ServiceProfiles
+ServiceState
+servicing
+Setup
+ShellComponents
+ShellExperiences
+SKB
+SoftwareDistribution
+Speech
+Speech_OneCore
+System
+System32
+SystemApps
+SystemResources
+SysWOW64
+TAPI
+Tasks
+Temp
+TextInput
+tracing
+twain_32
+UpdateAssistant
+Vss
+WaaS
+Web
+WinSxS
+bfsvc.exe                File:             C:\Windows\bfsvc.exe...
+bootstat.dat             File:             C:\Windows\bootstat.dat...
+comsetup.log             File:             C:\Windows\comsetup.log...
+Core.xml                 File:             C:\Windows\Core.xml...
+CSUP.txt                 File:             C:\Windows\CSUP.txt...
+diagerr.xml              File:             C:\Windows\diagerr.xml...
+diagwrn.xml              File:             C:\Windows\diagwrn.xml...
+DirectX.log              File:             C:\Windows\DirectX.log...
+DPINST.LOG               File:             C:\Windows\DPINST.LOG...
+DtcInstall.log           File:             C:\Windows\DtcInstall.log...
+explorer.exe             File:             C:\Windows\explorer.exe...
+HelpPane.exe             File:             C:\Windows\HelpPane.exe...
+hh.exe                   File:             C:\Windows\hh.exe...
+mib.bin                  File:             C:\Windows\mib.bin...
+notepad.exe              File:             C:\Windows\notepad.exe...
+NvContainerRecovery.bat  File:             C:\Windows\NvContainerRecovery.bat...
+PFRO.log                 File:             C:\Windows\PFRO.log...
+regedit.exe              File:             C:\Windows\regedit.exe...
+RtlExUpd.dll             File:             C:\Windows\RtlExUpd.dll...
+setupact.log             File:             C:\Windows\setupact.log...
+setuperr.log             File:             C:\Windows\setuperr.log...
+SMSS-PFRO1f6e.tmp        File:             C:\Windows\SMSS-PFRO1f6e.tmp...
+splwow64.exe             File:             C:\Windows\splwow64.exe...
+system.ini               File:             C:\Windows\system.ini...
+twain_32.dll             File:             C:\Windows\twain_32.dll...
+win.ini                  File:             C:\Windows\win.ini...
+WindowsUpdate.log        File:             C:\Windows\WindowsUpdate.log...
+winhlp32.exe             File:             C:\Windows\winhlp32.exe...
+WMSysPr9.prx             File:             C:\Windows\WMSysPr9.prx...
+write.exe                File:             C:\Windows\write.exe...
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name,  @{n='tamaño';e={$_.length}}
+
+Name                      tamaño
+----                      ------
+A-Volute                       1
+addins                         1
+appcompat                      1
+apppatch                       1
+AppReadiness                   1
+assembly                       1
+bcastdvr                       1
+Boot                           1
+Branding                       1
+CbsTemp                        1
+Containers                     1
+Cursors                        1
+debug                          1
+diagnostics                    1
+DiagTrack                      1
+DigitalLocker                  1
+Downloaded Program Files       1
+en-US                          1
+es-ES                          1
+Fonts                          1
+GameBarPresenceWriter          1
+Globalization                  1
+Help                           1
+IdentityCRL                    1
+IME                            1
+ImmersiveControlPanel          1
+INF                            1
+InfusedApps                    1
+InputMethod                    1
+L2Schemas                      1
+LiveKernelReports              1
+Logs                           1
+Media                          1
+Microsoft.NET                  1
+Migration                      1
+ModemLogs                      1
+OCR                            1
+Offline Web Pages              1
+Panther                        1
+Performance                    1
+PLA                            1
+PolicyDefinitions              1
+Prefetch                       1
+PrintDialog                    1
+Provisioning                   1
+Registration                   1
+rescache                       1
+Resources                      1
+RE_DRIVE                       1
+SchCache                       1
+schemas                        1
+security                       1
+ServiceProfiles                1
+ServiceState                   1
+servicing                      1
+Setup                          1
+ShellComponents                1
+ShellExperiences               1
+SKB                            1
+SoftwareDistribution           1
+Speech                         1
+Speech_OneCore                 1
+System                         1
+System32                       1
+SystemApps                     1
+SystemResources                1
+SysWOW64                       1
+TAPI                           1
+Tasks                          1
+Temp                           1
+TextInput                      1
+tracing                        1
+twain_32                       1
+UpdateAssistant                1
+Vss                            1
+WaaS                           1
+Web                            1
+WinSxS                         1
+bfsvc.exe                  73216
+bootstat.dat               67584
+comsetup.log                 753
+Core.xml                   33951
+CSUP.txt                      10
+diagerr.xml                 7623
+diagwrn.xml                 7623
+DirectX.log                  200
+DPINST.LOG                 95522
+DtcInstall.log               776
+explorer.exe             4615376
+HelpPane.exe             1059840
+hh.exe                     18432
+mib.bin                    43131
+notepad.exe               181248
+NvContainerRecovery.bat     1951
+PFRO.log                 1282944
+regedit.exe               358400
+RtlExUpd.dll             2856800
+setupact.log                6324
+setuperr.log                   0
+SMSS-PFRO1f6e.tmp          99920
+splwow64.exe              132608
+system.ini                   219
+twain_32.dll               64512
+win.ini                       92
+WindowsUpdate.log            276
+winhlp32.exe               11776
+WMSysPr9.prx              316640
+write.exe                  11264
+
+
+PS C:\Users\USUARIO> ls -Path C:\Windows | ft -Property name, @{n='tamaño';e={$_.length}}, versionInfo
+
+Name                      tamaño versionInfo
+----                      ------ -----------
+A-Volute                       1
+addins                         1
+appcompat                      1
+apppatch                       1
+AppReadiness                   1
+assembly                       1
+bcastdvr                       1
+Boot                           1
+Branding                       1
+CbsTemp                        1
+Containers                     1
+Cursors                        1
+debug                          1
+diagnostics                    1
+DiagTrack                      1
+DigitalLocker                  1
+Downloaded Program Files       1
+en-US                          1
+es-ES                          1
+Fonts                          1
+GameBarPresenceWriter          1
+Globalization                  1
+Help                           1
+IdentityCRL                    1
+IME                            1
+ImmersiveControlPanel          1
+INF                            1
+InfusedApps                    1
+InputMethod                    1
+L2Schemas                      1
+LiveKernelReports              1
+Logs                           1
+Media                          1
+Microsoft.NET                  1
+Migration                      1
+ModemLogs                      1
+OCR                            1
+Offline Web Pages              1
+Panther                        1
+Performance                    1
+PLA                            1
+PolicyDefinitions              1
+Prefetch                       1
+PrintDialog                    1
+Provisioning                   1
+Registration                   1
+rescache                       1
+Resources                      1
+RE_DRIVE                       1
+SchCache                       1
+schemas                        1
+security                       1
+ServiceProfiles                1
+ServiceState                   1
+servicing                      1
+Setup                          1
+ShellComponents                1
+ShellExperiences               1
+SKB                            1
+SoftwareDistribution           1
+Speech                         1
+Speech_OneCore                 1
+System                         1
+System32                       1
+SystemApps                     1
+SystemResources                1
+SysWOW64                       1
+TAPI                           1
+Tasks                          1
+Temp                           1
+TextInput                      1
+tracing                        1
+twain_32                       1
+UpdateAssistant                1
+Vss                            1
+WaaS                           1
+Web                            1
+WinSxS                         1
+bfsvc.exe                  73216 File:             C:\Windows\bfsvc.exe...
+bootstat.dat               67584 File:             C:\Windows\bootstat.dat...
+comsetup.log                 753 File:             C:\Windows\comsetup.log...
+Core.xml                   33951 File:             C:\Windows\Core.xml...
+CSUP.txt                      10 File:             C:\Windows\CSUP.txt...
+diagerr.xml                 7623 File:             C:\Windows\diagerr.xml...
+diagwrn.xml                 7623 File:             C:\Windows\diagwrn.xml...
+DirectX.log                  200 File:             C:\Windows\DirectX.log...
+DPINST.LOG                 95522 File:             C:\Windows\DPINST.LOG...
+DtcInstall.log               776 File:             C:\Windows\DtcInstall.log...
+explorer.exe             4615376 File:             C:\Windows\explorer.exe...
+HelpPane.exe             1059840 File:             C:\Windows\HelpPane.exe...
+hh.exe                     18432 File:             C:\Windows\hh.exe...
+mib.bin                    43131 File:             C:\Windows\mib.bin...
+notepad.exe               181248 File:             C:\Windows\notepad.exe...
+NvContainerRecovery.bat     1951 File:             C:\Windows\NvContainerRecovery.bat...
+PFRO.log                 1282944 File:             C:\Windows\PFRO.log...
+regedit.exe               358400 File:             C:\Windows\regedit.exe...
+RtlExUpd.dll             2856800 File:             C:\Windows\RtlExUpd.dll...
+setupact.log                6324 File:             C:\Windows\setupact.log...
+setuperr.log                   0 File:             C:\Windows\setuperr.log...
+SMSS-PFRO1f6e.tmp          99920 File:             C:\Windows\SMSS-PFRO1f6e.tmp...
+splwow64.exe              132608 File:             C:\Windows\splwow64.exe...
+system.ini                   219 File:             C:\Windows\system.ini...
+twain_32.dll               64512 File:             C:\Windows\twain_32.dll...
+win.ini                       92 File:             C:\Windows\win.ini...
+WindowsUpdate.log            276 File:             C:\Windows\WindowsUpdate.log...
+winhlp32.exe               11776 File:             C:\Windows\winhlp32.exe...
+WMSysPr9.prx              316640 File:             C:\Windows\WMSysPr9.prx...
+write.exe                  11264 File:             C:\Windows\write.exe...
+
+
+PS C:\Users\USUARIO> Import-Module NetAdapter
+PS C:\Users\USUARIO> Get-NetAdapter | Where -filter {$_.Virtual -eq $false}
+
+Name                      InterfaceDescription                    ifIndex Status       MacAddress             LinkSpeed
+----                      --------------------                    ------- ------       ----------             ---------
+Wi-Fi                     Intel(R) Wireless-AC 9560 160MHz             19 Up           18-1D-EA-72-90-07       130 Mbps
+Ethernet                  Killer E2400 Gigabit Ethernet Contro...      17 Disconnected 00-D8-61-06-6C-5D          0 bps
+
+
+PS C:\Users\USUARIO> import-dnsClient
+import-dnsClient : El término 'import-dnsClient' no se reconoce como nombre de un cmdlet, función, archivo de script o 
+programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que 
+dicha ruta es correcta e inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ import-dnsClient
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import-dnsClient:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+import-dnsClient : El término 'import-dnsClient' no se reconoce como nombre de un cmdlet, función, archivo de script o programa
+ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e
+inténtelo de nuevo.
+En línea: 1 Carácter: 1
++ import-dnsClient
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (import-dnsClient:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\USUARIO> Import-Module DnsClient
+PS C:\Users\USUARIO> Get-DnsClientCache | gm
+
+
+   TypeName: Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_DNSClientCache
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+TTL                       AliasProperty TTL = TimeToLive
+Clone                     Method        System.Object ICloneable.Clone()
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+GetCimSessionComputerName Method        string GetCimSessionComputerName()
+GetCimSessionInstanceId   Method        guid GetCimSessionInstanceId()
+GetHashCode               Method        int GetHashCode()
+GetObjectData             Method        void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Ser...
+GetType                   Method        type GetType()
+ToString                  Method        string ToString()
+Caption                   Property      string Caption {get;set;}
+Data                      Property      string Data {get;}
+DataLength                Property      uint16 DataLength {get;}
+Description               Property      string Description {get;set;}
+ElementName               Property      string ElementName {get;set;}
+Entry                     Property      string Entry {get;}
+InstanceID                Property      string InstanceID {get;set;}
+Name                      Property      string Name {get;}
+PSComputerName            Property      string PSComputerName {get;}
+Section                   Property      byte Section {get;}
+Status                    Property      uint32 Status {get;}
+TimeToLive                Property      uint32 TimeToLive {get;}
+Type                      Property      uint16 Type {get;}
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache 
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  203592      4 192.168.137.1
+msi.mshome.net                                      AAAA   NoRecords
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  203592      4 192.168.137.222
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+222.137.168.192.in-add... 222.137.168.192.in-add... PTR    Success   Answer  203592      8 LAPTOP-78991CV9.mshome.net
+d.docs.live.net           d.docs.live.net           CNAME  Success   Answer      28      8 odc-routekey-meta-geo.onedrive.akadns.net
+d.docs.live.net           odc-routekey-meta-geo.... CNAME  Success   Answer      28      8 odc-routekey-meta-brs.onedrive.akadns.net
+d.docs.live.net           odc-routekey-meta-brs.... CNAME  Success   Answer      28      8 odc-common-us-meta.onedrive.akadns.net....
+d.docs.live.net           odc-common-us-meta.one... CNAME  Success   Answer      28      8 l-0003.l-msedge.net
+d.docs.live.net           l-0003.l-msedge.net       A      Success   Answer      28      4 13.107.42.12
+1.137.168.192.in-addr.... 1.137.168.192.in-addr.... PTR    Success   Answer  203592      8 MSI.mshome.net
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -eq ("AAAA" -and "A")}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  203458      4 192.168.137.1
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  203458      4 192.168.137.222
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -eq ("AAAA")}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like ("AAAA")}
+PS C:\Users\USUARIO> Get-DnsClientCache 
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  203417      4 192.168.137.1
+msi.mshome.net                                      AAAA   NoRecords
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  203417      4 192.168.137.222
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+222.137.168.192.in-add... 222.137.168.192.in-add... PTR    Success   Answer  203417      8 LAPTOP-78991CV9.mshome.net
+1.137.168.192.in-addr.... 1.137.168.192.in-addr.... PTR    Success   Answer  203417      8 MSI.mshome.net
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like AAAA}
+En línea: 1 Carácter: 50
++ Get-DnsClientCache | Where -filter {$_.Type -like AAAA}
++                                                  ~
+Debe proporcionar una expresión de valor después del operador '-like'.
+
+En línea: 1 Carácter: 51
++ Get-DnsClientCache | Where -filter {$_.Type -like AAAA}
++                                                   ~~~~
+Token 'AAAA' inesperado en la expresión o la instrucción.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : ExpectedValueExpression
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like "AAAA"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like "AAAA*"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like "*AAAA*"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like "AAA"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -like "A"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -eq "A"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -eq ("AAAA" -and "A")}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+nexusrules.officeapps.... prod.nexusrules.live.c... A      Success   Answer     197      4 52.109.88.35
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  203350      4 192.168.137.1
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  203350      4 192.168.137.222
+outlookmobile-office36... e-0009.e-msedge.net       A      Success   Answer      29      4 13.107.5.88
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -eq "AAAA"}
+PS C:\Users\USUARIO> Get-DnsClientCache 
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+nexusrules.officeapps.... nexusrules.officeapps.... CNAME  Success   Answer     176      8 prod.nexusrules.live.com.akadns.net
+nexusrules.officeapps.... prod.nexusrules.live.c... A      Success   Answer     176      4 52.109.88.35
+msi.mshome.net                                      AAAA   NoRecords
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  203329      4 192.168.137.1
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  203329      4 192.168.137.222
+222.137.168.192.in-add... 222.137.168.192.in-add... PTR    Success   Answer  203329      8 LAPTOP-78991CV9.mshome.net
+1.137.168.192.in-addr.... 1.137.168.192.in-addr.... PTR    Success   Answer  203329      8 MSI.mshome.net
+outlookmobile-office36... outlookmobile-office36... CNAME  Success   Answer       8      8 outlookmobile-office365-tas-msedge-net....
+outlookmobile-office36... outlookmobile-office36... CNAME  Success   Answer       8      8 e-0009.e-msedge.net
+outlookmobile-office36... e-0009.e-msedge.net       A      Success   Answer       8      4 13.107.5.88
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Where -filter {$_.Type -eq "A"}
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object type |gm
+
+
+   TypeName: Selected.Microsoft.Management.Infrastructure.CimInstance
+
+Name        MemberType   Definition
+----        ----------   ----------
+Equals      Method       bool Equals(System.Object obj)
+GetHashCode Method       int GetHashCode()
+GetType     Method       type GetType()
+ToString    Method       string ToString()
+type        NoteProperty uint16 type=5
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object type 
+
+type
+----
+   5
+   1
+   1
+  28
+   1
+  28
+  12
+  12
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object entry
+
+entry
+-----
+nexusrules.officeapps.live.com
+nexusrules.officeapps.live.com
+roaming.officeapps.live.com
+roaming.officeapps.live.com
+msi.mshome.net
+msi.mshome.net
+laptop-78991cv9.mshome.net
+laptop-78991cv9.mshome.net
+222.137.168.192.in-addr.arpa
+1.137.168.192.in-addr.arpa
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | gm
+
+
+   TypeName: Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_DNSClientCache
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+TTL                       AliasProperty TTL = TimeToLive
+Clone                     Method        System.Object ICloneable.Clone()
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+GetCimSessionComputerName Method        string GetCimSessionComputerName()
+GetCimSessionInstanceId   Method        guid GetCimSessionInstanceId()
+GetHashCode               Method        int GetHashCode()
+GetObjectData             Method        void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Ser...
+GetType                   Method        type GetType()
+ToString                  Method        string ToString()
+Caption                   Property      string Caption {get;set;}
+Data                      Property      string Data {get;}
+DataLength                Property      uint16 DataLength {get;}
+Description               Property      string Description {get;set;}
+ElementName               Property      string ElementName {get;set;}
+Entry                     Property      string Entry {get;}
+InstanceID                Property      string InstanceID {get;set;}
+Name                      Property      string Name {get;}
+PSComputerName            Property      string PSComputerName {get;}
+Section                   Property      byte Section {get;}
+Status                    Property      uint32 Status {get;}
+TimeToLive                Property      uint32 TimeToLive {get;}
+Type                      Property      uint16 Type {get;}
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object description
+
+description
+-----------
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object instanceId
+
+instanceId
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object InstanceID
+
+InstanceID
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object section
+
+section
+-------
+      1
+      1
+      1
+      1
+      1
+      0
+      1
+      0
+      1
+      1
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object caption
+
+caption
+-------
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | gm
+
+
+   TypeName: Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_DNSClientCache
+
+Name                      MemberType    Definition
+----                      ----------    ----------
+TTL                       AliasProperty TTL = TimeToLive
+Clone                     Method        System.Object ICloneable.Clone()
+Dispose                   Method        void Dispose(), void IDisposable.Dispose()
+Equals                    Method        bool Equals(System.Object obj)
+GetCimSessionComputerName Method        string GetCimSessionComputerName()
+GetCimSessionInstanceId   Method        guid GetCimSessionInstanceId()
+GetHashCode               Method        int GetHashCode()
+GetObjectData             Method        void GetObjectData(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Ser...
+GetType                   Method        type GetType()
+ToString                  Method        string ToString()
+Caption                   Property      string Caption {get;set;}
+Data                      Property      string Data {get;}
+DataLength                Property      uint16 DataLength {get;}
+Description               Property      string Description {get;set;}
+ElementName               Property      string ElementName {get;set;}
+Entry                     Property      string Entry {get;}
+InstanceID                Property      string InstanceID {get;set;}
+Name                      Property      string Name {get;}
+PSComputerName            Property      string PSComputerName {get;}
+Section                   Property      byte Section {get;}
+Status                    Property      uint32 Status {get;}
+TimeToLive                Property      uint32 TimeToLive {get;}
+Type                      Property      uint16 Type {get;}
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object ElementName
+
+ElementName
+-----------
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object name
+
+name
+----
+roaming.officeapps.live.com
+prod.roaming1.live.com.akadns.net
+MSI.mshome.net
+
+LAPTOP-78991CV9.mshome.net
+
+222.137.168.192.in-addr.arpa.
+1.137.168.192.in-addr.arpa.
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object PSComputerName
+
+PSComputerName
+--------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | Select-Object Type
+
+Type
+----
+   5
+   1
+   1
+  28
+   1
+  28
+  12
+  12
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq 1}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  203039      4 192.168.137.1
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  203039      4 192.168.137.222
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq 28}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net                                      AAAA   NoRecords
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq 12}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+222.137.168.192.in-add... 222.137.168.192.in-add... PTR    Success   Answer  203025      8 LAPTOP-78991CV9.mshome.net
+1.137.168.192.in-addr.... 1.137.168.192.in-addr.... PTR    Success   Answer  203025      8 MSI.mshome.net
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq 5}
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq 28 -and 1}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net                                      AAAA   NoRecords
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq (28 -or 1)}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+nexusrules.officeapps.... prod.nexusrules.live.c... A      Success   Answer     145      4 52.109.124.18
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  202999      4 192.168.137.1
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  202999      4 192.168.137.222
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq (28 )}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+msi.mshome.net                                      AAAA   NoRecords
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+
+
+PS C:\Users\USUARIO> Get-DnsClientCache | where -filter {$_.Type -eq (28 ) -or $_.Type -eq 1}
+
+Entry                     RecordName                Record Status    Section TimeTo Data   Data
+                                                    Type                     Live   Length
+-----                     ----------                ------ ------    ------- ------ ------ ----
+nexusrules.officeapps.... prod.nexusrules.live.c... A      Success   Answer     116      4 52.109.124.18
+msi.mshome.net            MSI.mshome.net            A      Success   Answer  202970      4 192.168.137.1
+msi.mshome.net                                      AAAA   NoRecords
+laptop-78991cv9.mshome... LAPTOP-78991CV9.mshome... A      Success   Answer  202970      4 192.168.137.222
+laptop-78991cv9.mshome...                           AAAA   NoRecords
+
+
+PS C:\Users\USUARIO> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20200311090241
+**********************
