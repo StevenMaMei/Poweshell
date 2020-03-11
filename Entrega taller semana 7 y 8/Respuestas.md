@@ -48,12 +48,13 @@
 ```R// Get-Process | where -filter {$_.Name -eq "Conhost" -or $_.Name -eq "Svchost"} | fl ```
   
 # SEMANA 8
+
 ### 1) ¿Cuál clase puede emplearse para consultar la dirección IP de un adaptador de red? ¿Posee dicha clase algún método para liberar un préstamo de dirección (lease) DHCP?
-R// Sí, la clase win32_NetworkAdapter configuration. Sin embargo no posee un método para liberar un préstamo de dirección DHCP
+``R// Sí, la clase win32_NetworkAdapter configuration. Sin embargo no posee un método para liberar un préstamo de dirección DHCP
 	
 Get-CimInstance win32_networkadapterconfiguration | Select-Object IP -> Así se consultaría la IP de los adaptadores
 	
-Alternativamente -> Get-WmiObject  win32_networkadapterconfiguration | Select-Object IP
+Alternativamente -> Get-WmiObject  win32_networkadapterconfiguration | Select-Object IP``
 
 ### 2) Despliegue una lista de parches empleando WMI (Microsoft se refiere a los parches con el nombre quick-fix engineering). Es diferente el listado al que produce el cmdlet Get-Hotfix?
 	
@@ -63,18 +64,17 @@ R//
 	Sin embargo, si se usa Get-CimInstance win32_quickfixengineering. En primer instancia, el listado producido por ambos comandos no difiere. Sin embargo, cuando se hace GM, sí hay pequeñas diferencias en cuanto a los métodos y propiedades
 ### 3)  Empleando WMI, muestre una lista de servicios, que incluya su status actual, su modalidad de inicio, y las cuentas que emplean para hacer login.
 	
-	```R//Get-WmiObject win32_service | Select-Object status, startmode, systemname```
+```R//Get-WmiObject win32_service | Select-Object status, startmode, systemname```
 	
 ### 4) Empleando cmdlets de CIM, liste todas las clases del namespace SecurityCenter2, que tengan product como parte del nombre.
 
-	```R// Get-CimClass -Namespace root/SecurityCenter2 | where -Filter {$_.CimClassName -like "*product*"}```
+```R// Get-CimClass -Namespace root/SecurityCenter2 | where -Filter {$_.CimClassName -like "*product*"}```
 	
 ### 5) Empleando cmdlets de CIM, y los resultados del ejercicio anterior, muestre los nombres de las aplicaciones antispyware instaladas en el sistema. También puede consultar si hay productos antivirus instalados en el sistema.
 	
-	```R// Para mirar los antispyware se usa
+```R// Para mirar los antispyware se usa
 	 Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName
 	
 	Para mirar los antivirus se usa
 	
-	Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName
- ```
+	Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName ```
