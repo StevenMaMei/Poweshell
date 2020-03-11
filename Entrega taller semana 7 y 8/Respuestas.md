@@ -77,10 +77,11 @@ R//
 	
 ### 5) Empleando cmdlets de CIM, y los resultados del ejercicio anterior, muestre los nombres de las aplicaciones antispyware instaladas en el sistema. También puede consultar si hay productos antivirus instalados en el sistema.
 	
-```R// Para mirar los antispyware se usa
-	 Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName
+```
+R// Para mirar los antispyware se usa
+Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName
 	
-	Para mirar los antivirus se usa
+Para mirar los antivirus se usa
 	
-	Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName
+Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName
 ```
