@@ -79,9 +79,7 @@ Get-HotFix | where -filter {$_.description -like "*security*"} |fl
 R// Sí, la clase **win32_NetworkAdapterconfiguration**. Sin embargo no posee un método para liberar un préstamo de dirección DHCP
 	
 ```
-Get-CimInstance win32_networkadapterconfiguration | Select-Object IP
-
--> Así se consultaría la IP de los adaptadores
+Get-CimInstance win32_networkadapterconfiguration | Select-Object IP -> Así se consultaría la IP de los adaptadores
 	
 Alternativamente ->  Get-WmiObject  win32_networkadapterconfiguration | Select-Object IP
 ```
@@ -111,9 +109,13 @@ Get-CimClass -Namespace root/SecurityCenter2 | where -Filter {$_.CimClassName -l
 	
 
 R// Para mirar los **antispyware** se usa
-```Powershell Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName ```
+```Powershell 
+Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiSpywareProduct | Select-Object displayName 
+```
 	
 Para mirar los **antivirus** se usa
 	
-```Powershell Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName ```
+```Powershell 
+Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntiVirusProduct | Select-Object displayName 
+```
 
