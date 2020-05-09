@@ -8,12 +8,22 @@ completa.`n
 4. Cantidad de memoria libre y cantidad del espacio de swap en uso (en bytes y porcentaje).`n
 5. Numero de conexiones de red activas actualmente (en estado ESTABLISHED).`n "
 
-if($option -eq 1){
-	Get-Process | Sort-Object cpu -Descending | Select-Object -first 5;
+while (true) {
+	if($option -eq 1){
+		Get-Process | Sort-Object cpu -Descending | Select-Object -first 5;
+	}
+	elseif($option -eq 2){
+		Get-WmiObject -Class Win32_LogicalDisk | Select-Object name,@{n='Tamaño (Bytes)'; e={$_.size}},@{n='Espacio libre (Bytes)'; e={$_.freespace}};
+	}
+	elseif($option -eq 3){
+		$disk = read-host "Indique el disco o filesystem.`n"
+		Get-ChildItem -Path $disk | Sort-Object -Property Length -Descending | Select-Object FullName, Length -First 1;
+	}
+	elseif($option -eq 4){
+
+	}
+	elseif($option -eq 5){
+		(Get-WmiObject Win32_NetworkAdapter -Filter "netconnectionstatus = 2").Count
+	}
+
 }
-elseif($option -eq 2){
-	Get-WmiObject -Class Win32_LogicalDisk | Select-Object name,@{n='Tamaño (Bytes)'; e={$_.size}},@{n='Espacio libre (Bytes)'; e={$_.freespace}};
-}
-elseif($option -eq 3){}
-elseif($option -eq 4){}
-elseif($option -eq 5){}
