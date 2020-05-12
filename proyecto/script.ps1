@@ -1,3 +1,5 @@
+
+while ($true) {
 $option = read-host "Introduzca la opcion: `n
 1. Desplegar los cinco procesos que mas CPU este consumiendo en ese momento.`n
 2. Desplegar los filesystems o discos conectados a la maquina. Incluir para cada disco su
@@ -8,7 +10,6 @@ completa.`n
 4. Cantidad de memoria libre y cantidad del espacio de swap en uso (en bytes y porcentaje).`n
 5. Numero de conexiones de red activas actualmente (en estado ESTABLISHED).`n "
 
-while (true) {
 	if($option -eq 1){
 		Get-Process | Sort-Object cpu -Descending | Select-Object -first 5;
 	}
@@ -27,6 +28,8 @@ while (true) {
 	}
 	elseif($option -eq 5){
 		(Get-WmiObject Win32_NetworkAdapter -Filter "netconnectionstatus = 2").Count
+	}else{
+	 exit;
 	}
 
 }
