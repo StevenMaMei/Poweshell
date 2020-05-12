@@ -20,7 +20,10 @@ while (true) {
 		Get-ChildItem -Path $disk | Sort-Object -Property Length -Descending | Select-Object FullName, Length -First 1;
 	}
 	elseif($option -eq 4){
-
+		Get-WmiObject win32_operatingSystem | 
+			select @{n="Mem. física libre (Bytes)";e={$_.FreePhysicalMemory}}, @{n="Mem. física libre (%)";e={($_.FreePhysicalMemory / $_.TotalVisibleMemorySize) * 100}}, 
+					@{n="Mem. virtual libre (Bytes)";e={$_.FreeVirtualMemory}}, @{n="Mem. virtual libre (%)";e={($_.FreeVirtualMemory / $_.TotalVirtualMemorySize) * 100}},
+			       @{n="Swap ocupado (Bytes)";e={$_.SizeStoredInPagingFiles}}, @{n="Swap ocupado (%)";e={($_.SizeStoredInPagingFiles /($_.SizeStoredInPagingFiles + $_.FreeSpaceInPagingFiles)) * 100}}
 	}
 	elseif($option -eq 5){
 		(Get-WmiObject Win32_NetworkAdapter -Filter "netconnectionstatus = 2").Count
